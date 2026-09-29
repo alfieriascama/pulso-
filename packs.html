@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Packs — Beti · Pulso+</title>
+  <meta name="description" content="Elige tu nivel de energía: Pack Prueba (3), Pack Semanal (6) o Pack Mensual / Gimnasios (24).">
+  <meta name="theme-color" content="#100904">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <header class="nav">
+    <a class="nav__logo" href="index.html" aria-label="PULSO+ de Beti, inicio"><img src="assets/img/pulso-logo-crema.webp" alt="PULSO+" width="1953" height="306"></a>
+    <nav style="display:flex;align-items:center;gap:24px" aria-label="Principal">
+      <ul class="nav__links" id="menu">
+        <li><a href="index.html">Intro</a></li>
+        <li><a href="beneficios.html">Beneficios</a></li>
+        <li><a href="ingredientes.html">Ingredientes</a></li>
+        <li><a href="producto.html">Producto</a></li>
+        <li><a href="packs.html" aria-current="page">Packs</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li class="nav__mobile-cta"><a class="btn btn--pill" href="packs.html#pedido" data-wa="Hola, quiero información de PULSO+">Pedir por WhatsApp <span class="arrow">→</span></a></li>
+      </ul>
+      <a class="btn btn--ghost nav__cta" href="packs.html#pedido" data-wa="Hola, quiero información de PULSO+">Pedir por WhatsApp</a>
+      <button class="nav__toggle" type="button" aria-controls="menu" aria-expanded="false">Menú</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="section section--auto" aria-labelledby="h1">
+      <div class="eyebrow"><span class="num">05</span><span>Packs</span><hr class="dash"><span>Pedido directo</span></div>
+      <div class="page-head">
+        <h1 id="h1" class="display" data-reveal>Elige tu nivel de energía.</h1>
+        <p class="body" data-reveal>Pide por WhatsApp y coordinamos la entrega contigo.</p>
+      </div>
+      <div class="cards">
+        <article class="card" data-reveal>
+          
+          <div class="card__index"><span>Pack Prueba</span></div>
+          <p class="card__big">03</p>
+          <p class="label">Shots de 60 ml</p>
+          <hr class="dash">
+          <p class="body-sm">Para quienes quieren probar el sabor y sentir el efecto.</p>
+          <div class="card__foot">
+            <a class="btn btn--ghost" href="packs.html?pack=prueba#pedido" data-wa="¡Hola Beti! Quiero pedir el Pack Prueba de PULSO+ (3 shots)">Comprar pack prueba <span class="arrow">→</span></a>
+          </div>
+        </article>
+        <article class="card card--elevated" data-reveal>
+          <span class="badge">Más vendido</span>
+          <div class="card__index"><span>Pack Semanal</span></div>
+          <p class="card__big">06</p>
+          <p class="label">Shots de 60 ml</p>
+          <hr class="dash dash--drift">
+          <p class="body-sm">Diseñado para tu rutina de entrenamiento de la semana.</p>
+          <div class="card__foot">
+            <a class="btn btn--pill" href="packs.html?pack=semanal#pedido" data-wa="¡Hola Beti! Quiero pedir el Pack Semanal de PULSO+ (6 shots)">Pedir pack semanal <span class="arrow">→</span></a>
+          </div>
+        </article>
+        <article class="card" data-reveal>
+          
+          <div class="card__index"><span>Pack Mensual / Gimnasios</span></div>
+          <p class="card__big">24</p>
+          <p class="label">Shots de 60 ml</p>
+          <hr class="dash">
+          <p class="body-sm">Ideal para atletas constantes o distribución local.</p>
+          <div class="card__foot">
+            <a class="btn btn--ghost" href="packs.html?pack=pro#pedido" data-wa="¡Hola Beti! Quiero pedir el Pack Mensual / Gimnasios de PULSO+ (24 shots)">Obtener descuento pro <span class="arrow">→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--auto" id="pedido" aria-labelledby="pedido-h">
+      <div class="eyebrow"><span class="num">05.1</span><span>Arma tu pedido</span><hr class="dash"><span>WhatsApp</span></div>
+      <div class="page-head" style="align-items:start">
+        <div style="display:grid;gap:24px" data-reveal>
+          <h2 id="pedido-h" class="heading">Tu pedido, en un mensaje.</h2>
+          <p class="body-sm" style="max-width:40ch">Completa los datos y se abrirá WhatsApp con tu pedido listo para enviar. Nada se envía hasta que tú lo confirmes.</p>
+        </div>
+        <form class="form" id="pedido-form" data-reveal>
+          <div class="form__row">
+            <div class="field">
+              <label for="pack">Pack</label>
+              <select id="pack" name="pack">
+                <option data-key="prueba" value="Pack Prueba (3 shots)">Pack Prueba — 3 shots</option>
+                <option data-key="semanal" value="Pack Semanal (6 shots)" selected>Pack Semanal — 6 shots</option>
+                <option data-key="pro" value="Pack Mensual / Gimnasios (24 shots)">Pack Mensual — 24 shots</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="cantidad">Cantidad de packs</label>
+              <input id="cantidad" name="cantidad" type="number" min="1" max="50" value="1" required>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="field">
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" type="text" autocomplete="given-name" placeholder="Tu nombre">
+            </div>
+            <div class="field">
+              <label for="distrito">Distrito</label>
+              <input id="distrito" name="distrito" type="text" autocomplete="address-level2" placeholder="¿Dónde entregamos?">
+            </div>
+          </div>
+          <div class="field">
+            <label for="nota">Nota (opcional)</label>
+            <input id="nota" name="nota" type="text" placeholder="Horario, gimnasio, etc.">
+          </div>
+          <div><button class="btn btn--pill" type="submit">Enviar pedido por WhatsApp <span class="arrow">→</span></button></div>
+        </form>
+      </div>
+    </section>
+
+  <a class="next" href="faq.html">
+    <span style="display:grid;gap:12px">
+      <span class="micro">Siguiente vista — 06</span>
+      <span class="display">FAQ <span class="arrow">→</span></span>
+    </span>
+    <span class="label">Continuar</span>
+  </a>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <div style="display:grid;gap:18px;align-content:start">
+        <p class="footer__wordmark">Beti</p>
+        <p class="label">Pulso+ · Shot funcional 60 ml</p>
+      </div>
+      <div class="footer__col">
+        <h4>Vistas</h4>
+        <a href="index.html">Intro</a>
+        <a href="beneficios.html">Beneficios</a>
+        <a href="ingredientes.html">Ingredientes</a>
+        <a href="producto.html">Producto</a>
+        <a href="packs.html">Packs</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="footer__col">
+        <h4>Redes</h4>
+        <a href="https://www.instagram.com/pulso.pluss/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Términos y condiciones</a>
+      </div>
+    </div>
+    <hr class="dash">
+    <div class="footer__bottom">
+      <span class="micro">© <span data-year>2026</span> Beti · Pulso+ — Todos los derechos reservados</span>
+      <span class="micro credit">Hecho en Perú con beterraga de verdad</span>
+      <span class="legal">* Producto natural. No reemplaza una alimentación balanceada.</span>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
