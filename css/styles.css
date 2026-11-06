@@ -6,8 +6,8 @@
 
 :root {
   /* Colores */
-  --color-voltage-lime: #d2e823;
-  --color-voltage-lime-hover: #b8c91b;
+  --color-voltage-lime: #80bc16;  /* verde hoja (antes #d2e823) */
+  --color-voltage-lime-hover: #6ea512;
   --color-leaf: #80bc16;        /* verde de botones (hojas de Beti) */
   --color-leaf-hover: #6ea512;
   --color-cobalt-signal: #2665d6;
@@ -139,7 +139,7 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
     radial-gradient(48% 60% at 60% 60%, rgba(120, 0, 22, .90), transparent 72%),    /* vino de marca */
     radial-gradient(26% 32% at 66% 86%, rgba(255, 92, 138, .55), transparent 70%),  /* mejillas */
     radial-gradient(30% 38% at 98% 96%, rgba(98, 160, 40, .70), transparent 70%),   /* hojas */
-    radial-gradient(26% 30% at 4% 0%, rgba(210, 232, 35, .38), transparent 70%),    /* chispa lima */
+    radial-gradient(26% 30% at 4% 0%, rgba(128, 188, 22, .38), transparent 70%),    /* chispa verde */
     radial-gradient(30% 36% at 22% 100%, rgba(98, 160, 40, .30), transparent 70%);
   filter: blur(70px) saturate(1.15);
   animation: glow-drift 16s ease-in-out infinite alternate;
@@ -178,7 +178,7 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
     radial-gradient(48% 60% at 60% 60%, rgba(120, 0, 22, .90), transparent 72%),
     radial-gradient(26% 32% at 66% 86%, rgba(255, 92, 138, .55), transparent 70%),
     radial-gradient(30% 38% at 98% 96%, rgba(98, 160, 40, .70), transparent 70%),
-    radial-gradient(26% 30% at 4% 0%, rgba(210, 232, 35, .38), transparent 70%),
+    radial-gradient(26% 30% at 4% 0%, rgba(128, 188, 22, .38), transparent 70%),
     radial-gradient(30% 36% at 22% 100%, rgba(98, 160, 40, .30), transparent 70%);
   filter: blur(70px) saturate(1.15);
   animation: glow-drift 16s ease-in-out infinite alternate;
