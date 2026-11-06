@@ -321,11 +321,12 @@ h1, h2, h3, h4 { margin: 0; }
   padding: 40px 24px;
   overflow: hidden;
 }
-.showcase--maroon { background: var(--color-bordeaux-maroon); }
-.showcase--lime   { background: var(--color-voltage-lime); }
-.showcase--blue   { background: var(--color-cobalt-signal); }
-.showcase--lilac  { background: var(--color-lilac-whisper); }
-.showcase--indigo { background: var(--color-indigo-abyss); }
+/* En las franjas el producto flota directamente sobre el color de la sección;
+   el bloque de color solo se usa dentro de tarjetas (galería de producto). */
+.band > .wrap .showcase { overflow: visible; }
+.card .showcase--maroon { background: var(--color-bordeaux-maroon); }
+.card .showcase--lime   { background: var(--color-voltage-lime); }
+.card .showcase--lilac  { background: var(--color-lilac-whisper); }
 .showcase img {
   max-height: clamp(340px, 44vw, 540px);
   width: auto;
@@ -352,6 +353,7 @@ h1, h2, h3, h4 { margin: 0; }
   white-space: nowrap;
 }
 .sticker--lime { background: var(--color-voltage-lime); }
+.band--lime .sticker--lime { background: var(--color-midnight-ink); color: var(--color-plaster-white); }
 .sticker--1 { top: 12%; left: 6%; transform: rotate(-4deg); }
 .sticker--2 { top: 42%; right: 5%; transform: rotate(5deg); }
 .sticker--3 { bottom: 10%; left: 9%; transform: rotate(3deg); }
