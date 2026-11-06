@@ -584,6 +584,7 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
 .view-card--2 { background: var(--color-apricot); color: var(--color-midnight-ink); }
 .view-card--3 { background: var(--color-cream); color: var(--color-midnight-ink); }
 .view-card--4 { background: var(--color-ivory); color: var(--color-midnight-ink); }
+.band--white .view-card--4 { border: 1px solid rgba(30, 35, 48, .10); }
 .view-card[class*="view-card--"] .view-card__go { background: var(--color-midnight-ink); color: var(--color-plaster-white); }
 .view-card__go {
   width: 48px; height: 48px;
