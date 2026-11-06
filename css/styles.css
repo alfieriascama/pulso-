@@ -160,6 +160,10 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
 .band--glow .btn--dark { background: var(--color-voltage-lime); color: var(--color-midnight-ink); }
 .band--glow .btn--dark:hover { background: var(--color-voltage-lime-hover); }
 .band--glow .lead { color: rgba(255, 255, 255, .86); }
+/* Secciones seguidas con difuminado: se alterna el sentido de las manchas
+   y una línea muy suave marca dónde empieza cada una */
+main > .band--glow:nth-child(even)::before { scale: -1 1; }
+main > .band--glow + .band--glow { border-top: 1px solid rgba(255, 255, 255, .07); }
 
 .band .accent { color: var(--accent); }
 .band--first { padding-top: calc(var(--section-gap) + 72px); }
