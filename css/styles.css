@@ -117,7 +117,7 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
 .band--white  { --bg: var(--color-bone-canvas);    --accent: var(--color-midnight-ink); --ink: var(--color-midnight-ink); }
 .band--cream  { --bg: var(--color-cream);          --accent: var(--color-midnight-ink); --ink: var(--color-midnight-ink); }
 
-/* Franja con difuminado en los colores de Beti (beterraga, mejillas, hojas, lima) */
+/* Franja con difuminado en los colores de Beti (fresa, mejillas, hojas, lima) */
 /* Versión oscura: base vino casi negra, manchas intensas y grano sutil */
 .band--glow {
   --bg: #16040a;
@@ -133,7 +133,7 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
   inset: -12%;
   z-index: -2;
   background:
-    radial-gradient(34% 44% at 80% 44%, rgba(222, 22, 72, .85), transparent 70%),   /* beterraga detrás del producto */
+    radial-gradient(34% 44% at 80% 44%, rgba(222, 22, 72, .85), transparent 70%),   /* fresa detrás del producto */
     radial-gradient(48% 60% at 60% 60%, rgba(120, 0, 22, .90), transparent 72%),    /* vino de marca */
     radial-gradient(26% 32% at 66% 86%, rgba(255, 92, 138, .55), transparent 70%),  /* mejillas */
     radial-gradient(30% 38% at 98% 96%, rgba(98, 160, 40, .70), transparent 70%),   /* hojas */
