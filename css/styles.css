@@ -569,7 +569,7 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
 /* ---------- Enlaces a vistas (tarjetas de color) ---------- */
 .view-card {
   border-radius: var(--radius-cards);
-  padding: 28px;
+  padding: 23px;
   min-height: 220px;
   display: flex;
   flex-direction: column;
