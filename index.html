@@ -3,117 +3,136 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Beti — Pulso+ | Pequeño shot. Grandes resultados.</title>
-  <meta name="description" content="PULSO+ de Beti: shot funcional 100% natural de 60 ml con beterraga, granada y limón. Energía natural, antioxidantes y recuperación.">
-  <meta name="theme-color" content="#2a0710">
+  <title>PULSO+ de Beti — Pequeño shot. Grandes resultados.</title>
+  <meta name="description" content="PULSO+: shot funcional 100% natural de 60 ml con beterraga, granada y limón. Energía natural, antioxidantes y recuperación.">
+  <meta name="theme-color" content="#ffffff">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-  <header class="nav">
-    <a class="nav__logo" href="index.html" aria-label="PULSO+ de Beti, inicio"><img src="assets/img/pulso-logo-crema.webp" alt="PULSO+" width="1953" height="306"></a>
-    <nav style="display:flex;align-items:center;gap:24px" aria-label="Principal">
+  <div class="banner">
+    Shot funcional <strong>100% natural, sin azúcar añadida</strong> — <a href="packs.html#pedido" data-wa="Hola, quiero información de PULSO+">Pide el tuyo por WhatsApp</a>
+    <button class="banner__close" type="button" aria-label="Cerrar aviso">×</button>
+  </div>
+
+  <div class="nav-holder">
+    <nav class="nav" aria-label="Principal">
+      <a class="nav__logo" href="index.html" aria-label="PULSO+, inicio"><img src="assets/img/pulso-logo.webp" alt="PULSO+" width="1953" height="306"></a>
       <ul class="nav__links" id="menu">
-        <li><a href="index.html" aria-current="page">Intro</a></li>
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
         <li><a href="beneficios.html">Beneficios</a></li>
         <li><a href="ingredientes.html">Ingredientes</a></li>
         <li><a href="producto.html">Producto</a></li>
         <li><a href="packs.html">Packs</a></li>
         <li><a href="faq.html">FAQ</a></li>
-        <li class="nav__mobile-cta"><a class="btn btn--pill" href="packs.html#pedido" data-wa="Hola, quiero información de PULSO+">Pedir por WhatsApp <span class="arrow">→</span></a></li>
       </ul>
-      <a class="btn btn--ghost nav__cta" href="packs.html#pedido" data-wa="Hola, quiero información de PULSO+">Pedir por WhatsApp</a>
-      <button class="nav__toggle" type="button" aria-controls="menu" aria-expanded="false">Menú</button>
+      <div class="nav__right">
+        <a class="btn btn--ghost nav__ig" href="https://www.instagram.com/pulso.pluss/" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn--dark nav__cta" href="packs.html#pedido" data-wa="Hola, quiero información de PULSO+">Pedir ahora</a>
+        <button class="nav__toggle" type="button" aria-controls="menu" aria-expanded="false">Menú</button>
+      </div>
     </nav>
-  </header>
+  </div>
 
   <main>
 
-    <section class="hero" aria-labelledby="h1">
-      <div class="glow" aria-hidden="true"></div>
-      <div class="hero__lockup" data-reveal>
-        <p class="hero__tagline">Shot funcional · Beterraga, granada y limón</p>
-        <p class="hero__wordmark"><img class="hero__logo" src="assets/img/pulso-logo-crema.webp" alt="PULSO+" width="1953" height="306" fetchpriority="high"></p>
-      </div>
-
-      <div class="hero__stage">
-        <h1 id="h1" class="display hero__h1" data-reveal>Pequeño shot. Grandes resultados.</h1>
-        <img class="hero__bottle" src="assets/img/pulso-botella-frente.webp" alt="Botella de PULSO+ de 60 ml con la mascota Beti: shot funcional de remolacha, granada y limón" width="342" height="934" fetchpriority="high">
-        <ul class="hero__attrs" data-reveal>
-          <li><span class="label">01 — 100% natural</span><span class="body-sm">Sin azúcares ni conservantes añadidos.</span></li>
-          <li><span class="label">02 — Nitratos + polifenoles</span><span class="body-sm">Alto contenido en precursores de óxido nítrico y antioxidantes.</span></li>
-          <li><span class="label">03 — 60 ml</span><span class="body-sm">Listo para tomar en cualquier lugar.</span></li>
-        </ul>
-      </div>
-
-      <div class="hero__bottom">
-        <div class="info-card" data-reveal>
-          <p class="label">De Beti, la beterraga que entrena contigo.</p>
-          <hr class="dash dash--drift">
-          <p class="body-sm">Potencia tu rendimiento físico y acelera tu recuperación muscular con el poder natural de la beterraga, granada y limón.</p>
-          <div class="info-card__actions">
-            <a class="btn btn--pill" href="packs.html#pedido" data-wa="Hola, quiero información de PULSO+">¡Pide tu pack ahora! <span class="arrow">→</span></a>
-            <a class="btn btn--ghost" href="beneficios.html">Ver beneficios</a>
-          </div>
+    <section class="band band--lime band--first" aria-labelledby="h1">
+      <div class="wrap split">
+        <div class="stack">
+          <div class="tags"><span class="tag">Shot funcional · 60 ml</span><span class="tag">Sin azúcar añadida</span></div>
+          <h1 id="h1" class="display">Pequeño shot. Grandes resultados.</h1>
+          <p class="lead">Potencia tu rendimiento y acelera tu recuperación con el poder natural de la beterraga, la granada y el limón.</p>
+          <form class="quick" id="quick-form">
+            <label class="quick__prefix" for="quick-pack">Quiero el</label>
+            <select id="quick-pack" name="pack">
+              <option>Pack Prueba (3 shots)</option>
+              <option selected>Pack Semanal (6 shots)</option>
+              <option>Pack Mensual (24 shots)</option>
+            </select>
+            <button class="btn btn--dark btn--lg" type="submit">Pedir <span class="arrow">→</span></button>
+          </form>
+          <div class="actions"><a class="btn btn--ghost" href="beneficios.html">Ver beneficios →</a></div>
         </div>
-        <a class="mascot-card" href="#beti" data-reveal>
-          <img src="assets/img/beti-mascota.webp" alt="" width="885" height="1369">
-          <span style="display:grid;gap:6px"><span class="label">Conoce a Beti</span><span class="micro">La mascota ↓</span></span>
-        </a>
+        <div class="showcase showcase--maroon" data-reveal>
+          <span class="sticker sticker--1">100% natural</span>
+          <span class="sticker sticker--lime sticker--2">Sin azúcar añadida</span>
+          <span class="sticker sticker--3">60 ml</span>
+          <img src="assets/img/pulso-botella-frente.webp" alt="Botella de PULSO+ de 60 ml con la mascota Beti en la etiqueta" width="342" height="934" fetchpriority="high">
+        </div>
       </div>
     </section>
 
-    <section class="section" id="beti" aria-labelledby="beti-h">
-      <div class="glow" aria-hidden="true"></div>
-      <div class="eyebrow"><span class="num">01</span><span>La marca</span><hr class="dash"><span>Beti</span></div>
-      <div class="reveal">
-        <div class="reveal__left" data-reveal>
-          <h2 id="beti-h" class="heading">No es solo una beterraga.</h2>
-          <img src="assets/img/beti-firma.png" alt="Firma de Beti" width="302" height="182" style="width:min(200px,50%)">
+    <section class="band band--blue" aria-labelledby="todo-h">
+      <div class="wrap">
+        <div class="center-head">
+          <h2 id="todo-h" class="display-alt accent">Todo lo bueno de la beterraga, en 60 ml.</h2>
+          <p class="lead">Tres efectos en un solo trago, sin estimulantes artificiales.</p>
         </div>
-        <div class="reveal__object">
+        <div class="grid-3">
+          <article class="card card--white" data-reveal><svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M26 6 12 27h11l-3 15 16-22H25l1-14Z"/></svg><h3 class="heading">Energía natural</h3><p class="body">Nitratos de la beterraga que tu cuerpo convierte en óxido nítrico: más oxígeno para tus músculos.</p></article>
+          <article class="card card--white" data-reveal><svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M24 6 11 11v10c0 9 5.6 15.4 13 18 7.4-2.6 13-9 13-18V11L24 6Z"/><path d="m18 23 4.5 4.5L31 19"/></svg><h3 class="heading">Antioxidantes y defensas</h3><p class="body">Polifenoles de la granada y vitamina C del limón contra el estrés oxidativo.</p></article>
+          <article class="card card--white" data-reveal><svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><circle cx="29" cy="9" r="4"/><path d="m19 20 7-4 6 6 6 1M26 16l-4 11 7 5-2 10M22 27l-5 7-8-1"/></svg><h3 class="heading">Rendimiento y enfoque</h3><p class="body">Para el gimnasio, la pista o la oficina. Listo para tomar donde estés.</p></article>
+        </div>
+        <div class="actions" style="justify-content:center;margin-top:40px"><a class="btn btn--lime" href="beneficios.html">Ver beneficios <span class="arrow">→</span></a></div>
+      </div>
+    </section>
+
+    <section class="band band--maroon" id="beti" aria-labelledby="beti-h">
+      <div class="wrap split split--reverse">
+        <div class="stack">
+          <span class="tag" style="justify-self:start">Conoce a Beti</span>
+          <h2 id="beti-h" class="display-alt accent">No es solo una beterraga.</h2>
+          <p class="lead">Beti entrena, suda y se recupera contigo. Todo lo que tiene la beterraga, concentrado en un shot que cabe en tu bolsillo.</p>
+          <div class="actions"><a class="btn btn--lime" href="ingredientes.html">Qué hay dentro <span class="arrow">→</span></a></div>
+        </div>
+        <div class="showcase showcase--lime showcase--mascot" data-reveal>
           <img src="assets/img/beti-mascota.webp" alt="Beti, una beterraga sonriente con vincha deportiva y zapatillas, corriendo" width="885" height="1369" loading="lazy">
         </div>
-        <div class="reveal__right" data-reveal>
-          <p class="body">Beti entrena, suda y se recupera contigo. Todo lo que tiene la beterraga, concentrado en un shot que cabe en tu bolsillo.</p>
-          <a class="link" href="ingredientes.html">Qué hay dentro <span class="arrow">→</span></a>
-        </div>
       </div>
     </section>
 
-    <section class="section section--auto" aria-labelledby="explora-h">
-      <div class="eyebrow"><span class="num">02</span><span id="explora-h">Explora</span><hr class="dash"><span>5 vistas</span></div>
-      <div class="faq" style="border-top:0">
-        <a class="next" href="beneficios.html" style="padding-inline:0;border-top:0;border-bottom:1px dashed var(--color-cork-border)" data-reveal>
-          <span style="display:grid;gap:10px"><span class="micro">02</span><span class="heading">Beneficios <span class="arrow">→</span></span></span>
-          <span class="label" style="max-width:26ch;text-align:right">Antes y después de entrenar</span>
-        </a><a class="next" href="ingredientes.html" style="padding-inline:0;border-top:0;border-bottom:1px dashed var(--color-cork-border)" data-reveal>
-          <span style="display:grid;gap:10px"><span class="micro">03</span><span class="heading">Ingredientes <span class="arrow">→</span></span></span>
-          <span class="label" style="max-width:26ch;text-align:right">Beterraga · Granada · Limón</span>
-        </a><a class="next" href="producto.html" style="padding-inline:0;border-top:0;border-bottom:1px dashed var(--color-cork-border)" data-reveal>
-          <span style="display:grid;gap:10px"><span class="micro">04</span><span class="heading">Producto <span class="arrow">→</span></span></span>
-          <span class="label" style="max-width:26ch;text-align:right">La botella de 60 ml</span>
-        </a><a class="next" href="packs.html" style="padding-inline:0;border-top:0;border-bottom:1px dashed var(--color-cork-border)" data-reveal>
-          <span style="display:grid;gap:10px"><span class="micro">05</span><span class="heading">Packs <span class="arrow">→</span></span></span>
-          <span class="label" style="max-width:26ch;text-align:right">3, 6 o 24 shots</span>
-        </a><a class="next" href="faq.html" style="padding-inline:0;border-top:0;border-bottom:1px dashed var(--color-cork-border)" data-reveal>
-          <span style="display:grid;gap:10px"><span class="micro">06</span><span class="heading">FAQ <span class="arrow">→</span></span></span>
-          <span class="label" style="max-width:26ch;text-align:right">Preguntas frecuentes</span>
+    <section class="band band--white" aria-labelledby="explora-h">
+      <div class="wrap">
+        <div class="center-head">
+          <h2 id="explora-h" class="display-alt">Explora PULSO+</h2>
+        </div>
+        <div class="grid-4">
+        <a class="view-card card--blue" href="beneficios.html" data-reveal>
+          <span class="stack stack--tight"><span class="caption">Antes y después de entrenar</span><span class="heading-lg accent">Beneficios</span></span>
+          <span class="view-card__go" aria-hidden="true">→</span>
         </a>
+        <a class="view-card card--maroon" href="ingredientes.html" data-reveal>
+          <span class="stack stack--tight"><span class="caption">Beterraga · Granada · Limón</span><span class="heading-lg accent">Ingredientes</span></span>
+          <span class="view-card__go" aria-hidden="true">→</span>
+        </a>
+        <a class="view-card card--lime" href="producto.html" data-reveal>
+          <span class="stack stack--tight"><span class="caption">La botella de 60 ml</span><span class="heading-lg">Producto</span></span>
+          <span class="view-card__go" aria-hidden="true">→</span>
+        </a>
+        <a class="view-card card--saffron" href="packs.html" data-reveal>
+          <span class="stack stack--tight"><span class="caption">3, 6 o 24 shots</span><span class="heading-lg">Packs</span></span>
+          <span class="view-card__go" aria-hidden="true">→</span>
+        </a>
+        </div>
       </div>
     </section>
 
   </main>
 
   <footer class="footer">
-    <div class="footer__top">
+    <div class="footer__card">
+      <div class="footer__brand">
+        <img src="assets/img/pulso-logo.webp" alt="PULSO+" width="1953" height="306" loading="lazy">
+        <p class="small">Shot funcional de beterraga, granada y limón. 60 ml de energía natural, de la mano de Beti.</p>
+        <div><a class="btn btn--lime" href="packs.html#pedido" data-wa="Hola, quiero información de PULSO+">Pedir por WhatsApp</a></div>
+      </div>
       <div class="footer__col">
         <h4>Vistas</h4>
-        <a href="index.html">Intro</a>
+        <a href="index.html">Inicio</a>
         <a href="beneficios.html">Beneficios</a>
         <a href="ingredientes.html">Ingredientes</a>
         <a href="producto.html">Producto</a>
@@ -130,11 +149,9 @@
         <a href="#">Términos y condiciones</a>
       </div>
     </div>
-    <hr class="dash">
     <div class="footer__bottom">
-      <span class="micro">© <span data-year>2026</span> Alfadev — Todos los derechos reservados</span>
-      <span class="micro credit">Hecho en Perú con beterraga de verdad</span>
-      <span class="legal">* Producto natural. No reemplaza una alimentación balanceada.</span>
+      <span>© <span data-year>2026</span> Beti · PULSO+ — Todos los derechos reservados</span>
+      <span>* Producto natural. No reemplaza una alimentación balanceada.</span>
     </div>
   </footer>
   <script src="js/main.js"></script>

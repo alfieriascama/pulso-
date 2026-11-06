@@ -13,15 +13,36 @@ document.addEventListener('DOMContentLoaded', () => {
     a.rel = 'noopener';
   });
 
-  // Menú móvil
+  // Menú móvil (desplegable bajo la píldora)
   const nav = document.querySelector('.nav');
   const toggle = document.querySelector('.nav__toggle');
   if (nav && toggle) {
-    toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('is-open');
+    const setOpen = (open) => {
+      nav.classList.toggle('is-open', open);
       toggle.setAttribute('aria-expanded', String(open));
       toggle.textContent = open ? 'Cerrar' : 'Menú';
-      document.body.style.overflow = open ? 'hidden' : '';
+    };
+    toggle.addEventListener('click', () => setOpen(!nav.classList.contains('is-open')));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
+  }
+
+  // Franja superior: se puede cerrar y queda cerrada durante la visita
+  const banner = document.querySelector('.banner');
+  if (banner) {
+    try { if (sessionStorage.getItem('beti-banner') === 'off') banner.hidden = true; } catch (e) { /* sin storage */ }
+    banner.querySelector('.banner__close')?.addEventListener('click', () => {
+      banner.hidden = true;
+      try { sessionStorage.setItem('beti-banner', 'off'); } catch (e) { /* sin storage */ }
+    });
+  }
+
+  // Pedido rápido (portada): pack elegido → WhatsApp
+  const quick = document.querySelector('#quick-form');
+  if (quick) {
+    quick.addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      const pack = new FormData(quick).get('pack');
+      window.open(waLink(`Hola, quiero información de PULSO+ — ${pack}`), '_blank', 'noopener');
     });
   }
 

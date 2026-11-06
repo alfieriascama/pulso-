@@ -3,99 +3,116 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Beneficios — Beti · Pulso+</title>
+  <title>Beneficios — PULSO+ de Beti</title>
   <meta name="description" content="El doble efecto de PULSO+: pre-entreno natural con nitratos y recuperación con polifenoles y vitamina C.">
-  <meta name="theme-color" content="#2a0710">
+  <meta name="theme-color" content="#ffffff">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-  <header class="nav">
-    <a class="nav__logo" href="index.html" aria-label="PULSO+ de Beti, inicio"><img src="assets/img/pulso-logo-crema.webp" alt="PULSO+" width="1953" height="306"></a>
-    <nav style="display:flex;align-items:center;gap:24px" aria-label="Principal">
+  <div class="banner">
+    Shot funcional <strong>100% natural, sin azúcar añadida</strong> — <a href="packs.html#pedido" data-wa="Hola, quiero información de PULSO+">Pide el tuyo por WhatsApp</a>
+    <button class="banner__close" type="button" aria-label="Cerrar aviso">×</button>
+  </div>
+
+  <div class="nav-holder">
+    <nav class="nav" aria-label="Principal">
+      <a class="nav__logo" href="index.html" aria-label="PULSO+, inicio"><img src="assets/img/pulso-logo.webp" alt="PULSO+" width="1953" height="306"></a>
       <ul class="nav__links" id="menu">
-        <li><a href="index.html">Intro</a></li>
+        <li><a href="index.html">Inicio</a></li>
         <li><a href="beneficios.html" aria-current="page">Beneficios</a></li>
         <li><a href="ingredientes.html">Ingredientes</a></li>
         <li><a href="producto.html">Producto</a></li>
         <li><a href="packs.html">Packs</a></li>
         <li><a href="faq.html">FAQ</a></li>
-        <li class="nav__mobile-cta"><a class="btn btn--pill" href="packs.html#pedido" data-wa="Hola, quiero información de PULSO+">Pedir por WhatsApp <span class="arrow">→</span></a></li>
       </ul>
-      <a class="btn btn--ghost nav__cta" href="packs.html#pedido" data-wa="Hola, quiero información de PULSO+">Pedir por WhatsApp</a>
-      <button class="nav__toggle" type="button" aria-controls="menu" aria-expanded="false">Menú</button>
+      <div class="nav__right">
+        <a class="btn btn--ghost nav__ig" href="https://www.instagram.com/pulso.pluss/" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn--dark nav__cta" href="packs.html#pedido" data-wa="Hola, quiero información de PULSO+">Pedir ahora</a>
+        <button class="nav__toggle" type="button" aria-controls="menu" aria-expanded="false">Menú</button>
+      </div>
     </nav>
-  </header>
+  </div>
 
   <main>
 
-    <section class="section section--auto" aria-labelledby="h1">
-      <div class="eyebrow"><span class="num">02</span><span>Beneficios</span><hr class="dash"><span>El doble efecto</span></div>
-      <div class="page-head">
-        <h1 id="h1" class="display" data-reveal>Acompaña tu esfuerzo en cada etapa del entrenamiento.</h1>
-        <p class="body" data-reveal>Un mismo shot, dos momentos. Antes para rendir, después para recuperar.</p>
-      </div>
-
-      <div class="stages">
-        <article class="stage" data-reveal>
-          <span class="stage__icon"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="22" cy="22" r="21"/><path d="M24 9 14 24h8l-2 11 10-15h-8l2-11Z" stroke-linejoin="round"/></svg></span>
-          <p class="micro">Antes de entrenar — Pre-workout natural</p>
-          <h2 class="heading">Vasodilatación y resistencia.</h2>
-          <p class="body-sm">La beterraga aporta nitratos naturales que el cuerpo convierte en óxido nítrico, optimizando el flujo de oxígeno a tus músculos y retrasando la fatiga.</p>
-          <div class="stage__meta"><span class="tag">Nitratos</span><span class="tag">Óxido nítrico</span><span class="tag">30–45 min antes</span></div>
-        </article>
-        <article class="stage" data-reveal>
-          <span class="stage__icon"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="22" cy="22" r="21"/><path d="M22 10 13 13.5v7.2c0 6 3.9 10.6 9 12.3 5.1-1.7 9-6.3 9-12.3v-7.2L22 10Z" stroke-linejoin="round"/><path d="m17.5 21.5 3.2 3.2 6-6.2" stroke-linecap="round"/></svg></span>
-          <p class="micro">Después de entrenar — Recuperación</p>
-          <h2 class="heading">Menos dolor muscular e inflamación.</h2>
-          <p class="body-sm">La granada y el limón concentran potentes polifenoles y vitamina C que reducen el estrés oxidativo y ayudan a reparar los tejidos más rápido.</p>
-          <div class="stage__meta"><span class="tag">Polifenoles</span><span class="tag">Vitamina C</span><span class="tag">Justo después</span></div>
-        </article>
+    <section class="band band--blue band--first" aria-labelledby="h1">
+      <div class="wrap split">
+        <div class="stack">
+          <span class="tag" style="justify-self:start">Beneficios</span>
+          <h1 id="h1" class="display accent">Acompaña tu esfuerzo en cada etapa.</h1>
+          <p class="lead">Un mismo shot, dos momentos: antes para rendir, después para recuperar.</p>
+          <div class="actions"><a class="btn btn--lime" href="packs.html#pedido" data-wa="Hola, quiero información de PULSO+">Pedir por WhatsApp <span class="arrow">→</span></a></div>
+        </div>
+        <div class="showcase showcase--lime" data-reveal>
+          <span class="sticker sticker--1">Energía natural</span>
+          <span class="sticker sticker--2">Antioxidantes</span>
+          <img src="assets/img/pulso-botella-beneficios.webp" alt="Lateral de la botella PULSO+: energía natural, antioxidantes y defensas, rendimiento y enfoque" width="317" height="929" fetchpriority="high">
+        </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="momentos-h">
-      <div class="glow" aria-hidden="true"></div>
-      <div class="eyebrow"><span class="num">02.1</span><span id="momentos-h">Momentos de consumo</span><hr class="dash"><span>Tu rutina</span></div>
-      <div class="reveal">
-        <div class="reveal__left" data-reveal>
-          <h2 class="heading">Toma, entrena, recupera.</h2>
-          <a class="btn btn--pill" href="packs.html#pedido" data-wa="Hola, quiero información de PULSO+" style="justify-self:start">Pedir por WhatsApp <span class="arrow">→</span></a>
+    <section class="band band--white" aria-labelledby="doble-h">
+      <div class="wrap">
+        <div class="center-head"><h2 id="doble-h" class="display-alt">El doble efecto.</h2></div>
+        <div class="grid-2">
+          <article class="card card--lime" data-reveal>
+            <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M26 6 12 27h11l-3 15 16-22H25l1-14Z"/></svg>
+            <span class="caption">Antes de entrenar · Pre-workout natural</span>
+            <h3 class="heading-lg">Vasodilatación y resistencia.</h3>
+            <p class="body">La beterraga aporta nitratos naturales que el cuerpo convierte en óxido nítrico, optimizando el flujo de oxígeno a tus músculos y retrasando la fatiga.</p>
+            <div class="tags"><span class="tag">Nitratos</span><span class="tag">Óxido nítrico</span><span class="tag">30–45 min antes</span></div>
+          </article>
+          <article class="card card--maroon" data-reveal>
+            <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M24 6 11 11v10c0 9 5.6 15.4 13 18 7.4-2.6 13-9 13-18V11L24 6Z"/><path d="m18 23 4.5 4.5L31 19"/></svg>
+            <span class="caption">Después de entrenar · Recuperación</span>
+            <h3 class="heading-lg accent">Menos dolor muscular.</h3>
+            <p class="body">La granada y el limón concentran polifenoles y vitamina C que reducen el estrés oxidativo y ayudan a reparar los tejidos más rápido.</p>
+            <div class="tags"><span class="tag">Polifenoles</span><span class="tag">Vitamina C</span><span class="tag">Justo después</span></div>
+          </article>
         </div>
-        <div class="reveal__object">
-          <img src="assets/img/pulso-botella-beneficios.webp" alt="Lateral de la botella PULSO+: energía natural, antioxidantes y defensas, rendimiento y enfoque" width="317" height="929" loading="lazy">
-        </div>
-        <div class="reveal__right" data-reveal>
-          <p class="body">Sin cafeína ni estimulantes artificiales. La energía viene de la fruta, no de un laboratorio.</p>
-        </div>
-      </div>
-      <div class="timeline">
-        <div class="timeline__step" data-reveal><hr class="dash dash--drift"><span class="micro">−45 min</span><span class="heading-sm">Toma tu shot</span><span class="body-sm">Frío y de un solo trago.</span></div>
-        <div class="timeline__step" data-reveal><hr class="dash dash--drift"><span class="micro">0 min</span><span class="heading-sm">Entrena</span><span class="body-sm">Más oxígeno, menos fatiga.</span></div>
-        <div class="timeline__step" data-reveal><hr class="dash dash--drift"><span class="micro">+0 min</span><span class="heading-sm">Otro shot</span><span class="body-sm">Tras sesiones intensas.</span></div>
-        <div class="timeline__step" data-reveal><hr class="dash dash--drift"><span class="micro">+24 h</span><span class="heading-sm">Recupera</span><span class="body-sm">Listo para volver.</span></div>
       </div>
     </section>
 
-  <a class="next" href="ingredientes.html">
-    <span style="display:grid;gap:12px">
-      <span class="micro">Siguiente vista — 03</span>
-      <span class="display">Ingredientes <span class="arrow">→</span></span>
-    </span>
-    <span class="label">Continuar</span>
-  </a>
+    <section class="band band--maroon" aria-labelledby="rutina-h">
+      <div class="wrap">
+        <div class="center-head">
+          <h2 id="rutina-h" class="display-alt accent">Toma, entrena, recupera.</h2>
+          <p class="lead">Sin cafeína ni estimulantes artificiales. La energía viene de la fruta.</p>
+        </div>
+        <div class="steps">
+          <div class="step" data-reveal><span class="step__time">−45 min</span><span class="heading-sm">Toma tu shot</span><span class="small">Frío y de un solo trago.</span></div>
+          <div class="step" data-reveal><span class="step__time">0 min</span><span class="heading-sm">Entrena</span><span class="small">Más oxígeno, menos fatiga.</span></div>
+          <div class="step" data-reveal><span class="step__time">+0 min</span><span class="heading-sm">Otro shot</span><span class="small">Tras sesiones intensas.</span></div>
+          <div class="step" data-reveal><span class="step__time">+24 h</span><span class="heading-sm">Recupera</span><span class="small">Listo para volver.</span></div>
+        </div>
+        <div class="actions" style="justify-content:center;margin-top:40px"><a class="btn btn--lime" href="packs.html">Elegir mi pack <span class="arrow">→</span></a></div>
+      </div>
+    </section>
+
+    <section class="band band--white" aria-label="Siguiente vista">
+      <a class="next-link" href="ingredientes.html">
+        <span class="stack stack--tight"><span class="caption">Siguiente</span><span class="display-alt">Ingredientes</span></span>
+        <span class="view-card__go" aria-hidden="true">→</span>
+      </a>
+    </section>
 
   </main>
 
   <footer class="footer">
-    <div class="footer__top">
+    <div class="footer__card">
+      <div class="footer__brand">
+        <img src="assets/img/pulso-logo.webp" alt="PULSO+" width="1953" height="306" loading="lazy">
+        <p class="small">Shot funcional de beterraga, granada y limón. 60 ml de energía natural, de la mano de Beti.</p>
+        <div><a class="btn btn--lime" href="packs.html#pedido" data-wa="Hola, quiero información de PULSO+">Pedir por WhatsApp</a></div>
+      </div>
       <div class="footer__col">
         <h4>Vistas</h4>
-        <a href="index.html">Intro</a>
+        <a href="index.html">Inicio</a>
         <a href="beneficios.html">Beneficios</a>
         <a href="ingredientes.html">Ingredientes</a>
         <a href="producto.html">Producto</a>
@@ -112,11 +129,9 @@
         <a href="#">Términos y condiciones</a>
       </div>
     </div>
-    <hr class="dash">
     <div class="footer__bottom">
-      <span class="micro">© <span data-year>2026</span> Beti · Pulso+ — Todos los derechos reservados</span>
-      <span class="micro credit">Hecho en Perú con beterraga de verdad</span>
-      <span class="legal">* Producto natural. No reemplaza una alimentación balanceada.</span>
+      <span>© <span data-year>2026</span> Beti · PULSO+ — Todos los derechos reservados</span>
+      <span>* Producto natural. No reemplaza una alimentación balanceada.</span>
     </div>
   </footer>
   <script src="js/main.js"></script>
