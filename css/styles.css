@@ -19,6 +19,10 @@
   --color-indigo-abyss: #061492;
   --color-forest-depth: #254f1a;
   --color-saffron: #d6a337;
+  --color-peach: #ffa97b;
+  --color-apricot: #ffe5bf;
+  --color-cream: #fff2db;
+  --color-ivory: #fffaf3;
 
   /* Tipografía */
   --font-main: 'Montserrat', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -109,13 +113,13 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
 }
 .band--lime   { --bg: var(--color-voltage-lime);   --accent: var(--color-midnight-ink); --ink: var(--color-midnight-ink); }
 .band--blue   { --bg: var(--color-cobalt-signal);  --accent: var(--color-voltage-lime); --ink: var(--color-plaster-white); }
-.band--maroon { --bg: var(--color-bordeaux-maroon); --accent: var(--color-lilac-whisper); --ink: var(--color-plaster-white); }
+.band--maroon { --bg: var(--color-bordeaux-maroon); --accent: var(--color-plaster-white); --ink: var(--color-plaster-white); }
 .band--white  { --bg: var(--color-bone-canvas);    --accent: var(--color-midnight-ink); --ink: var(--color-midnight-ink); }
 
 /* Franja con difuminado en los colores de Beti (beterraga, mejillas, hojas, lima) */
 .band--glow {
   --bg: #fff6f3;
-  --accent: var(--color-bordeaux-maroon);
+  --accent: var(--color-midnight-ink);
   --ink: var(--color-midnight-ink);
   position: relative;
   overflow: hidden;
@@ -325,10 +329,14 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
 .card--blue   { background: var(--color-cobalt-signal); color: #fff; }
 .card--blue .accent { color: var(--color-voltage-lime); }
 .card--maroon { background: var(--color-bordeaux-maroon); color: #fff; }
-.card--maroon .accent { color: var(--color-lilac-whisper); }
+.card--maroon .accent { color: var(--color-plaster-white); }
 .card--indigo { background: var(--color-indigo-abyss); color: #fff; }
 .card--indigo .accent { color: var(--color-lilac-whisper); }
 .card--saffron { background: var(--color-saffron); color: var(--color-midnight-ink); }
+.card--p1 { background: var(--color-peach); color: var(--color-midnight-ink); }
+.card--p2 { background: var(--color-apricot); color: var(--color-midnight-ink); }
+.card--p3 { background: var(--color-cream); color: var(--color-midnight-ink); }
+.card--p4 { background: var(--color-ivory); color: var(--color-midnight-ink); }
 .card--outline { border: 2px solid var(--color-lilac-whisper); }
 .card--outline-forest { border: 2px solid var(--color-forest-depth); }
 .card--lighter { background: var(--color-maroon-light); border: 1px solid var(--color-lilac-whisper); color: #fff; }
@@ -446,6 +454,7 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
 }
 .rows li strong { font-weight: 800; }
 .rows--bone li { background: var(--color-bone-canvas); }
+.band--white .rows li { background: var(--color-apricot); }
 
 /* ---------- Pasos (timeline) ---------- */
 .steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--element-gap); }
@@ -469,6 +478,12 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
   font-weight: 700;
   letter-spacing: 0;
 }
+.band--white .step { border: 0; color: var(--color-midnight-ink); }
+.band--white .step:nth-child(4n+1) { background: var(--color-peach); }
+.band--white .step:nth-child(4n+2) { background: var(--color-apricot); }
+.band--white .step:nth-child(4n+3) { background: var(--color-cream); }
+.band--white .step:nth-child(4n+4) { background: var(--color-ivory); }
+.band--white .step__time { background: var(--color-bordeaux-maroon); color: var(--color-plaster-white); }
 @media (max-width: 900px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 520px) { .steps { grid-template-columns: minmax(0, 1fr); } }
 
@@ -532,6 +547,9 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
 .faq details[open] summary svg { transform: rotate(180deg); }
 .faq .answer { padding: 0 24px 24px; max-width: 70ch; color: rgba(255, 255, 255, .88); }
 .faq .answer a { color: var(--color-voltage-lime); font-weight: 700; }
+.band--glow .faq details { background: var(--color-ivory); border-color: var(--color-peach); color: var(--color-midnight-ink); }
+.band--glow .faq .answer { color: rgba(30, 35, 48, .82); }
+.band--glow .faq .answer a { color: var(--color-bordeaux-maroon); }
 
 /* ---------- Enlaces a vistas (tarjetas de color) ---------- */
 .view-card {
@@ -547,10 +565,10 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
 }
 .view-card:hover { transform: rotate(-1.5deg) scale(1.02); }
 .view-card .heading-lg { font-size: clamp(26px, 2.3vw, 36px); overflow-wrap: anywhere; }
-.view-card--1 { background: #ffa97b; color: var(--color-midnight-ink); }
-.view-card--2 { background: #ffe5bf; color: var(--color-midnight-ink); }
-.view-card--3 { background: #fff2db; color: var(--color-midnight-ink); }
-.view-card--4 { background: #fffaf3; color: var(--color-midnight-ink); }
+.view-card--1 { background: var(--color-peach); color: var(--color-midnight-ink); }
+.view-card--2 { background: var(--color-apricot); color: var(--color-midnight-ink); }
+.view-card--3 { background: var(--color-cream); color: var(--color-midnight-ink); }
+.view-card--4 { background: var(--color-ivory); color: var(--color-midnight-ink); }
 .view-card[class*="view-card--"] .view-card__go { background: var(--color-midnight-ink); color: var(--color-plaster-white); }
 .view-card__go {
   width: 48px; height: 48px;
