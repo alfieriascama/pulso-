@@ -580,6 +580,8 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
 }
 .view-card:hover { transform: rotate(-1.5deg) scale(1.02); }
 .view-card .heading-lg { font-size: clamp(26px, 2.3vw, 36px); overflow-wrap: anywhere; }
+.view-card__icon { display: inline-grid; justify-self: start; place-items: center; width: 56px; height: 56px; margin-top: 8px; border-radius: 9999px; background: rgba(255, 255, 255, .55); }
+.view-card__icon .icon { width: 30px; height: 30px; }
 .view-card--1 { background: var(--color-peach); color: var(--color-midnight-ink); }
 .view-card--2 { background: var(--color-apricot); color: var(--color-midnight-ink); }
 .view-card--3 { background: var(--color-cream); color: var(--color-midnight-ink); }
