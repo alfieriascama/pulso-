@@ -547,6 +547,11 @@ h1, h2, h3, h4 { margin: 0; }
 }
 .view-card:hover { transform: rotate(-1.5deg) scale(1.02); }
 .view-card .heading-lg { font-size: clamp(28px, 2.7vw, 40px); }
+.view-card--1 { background: #ffa97b; color: var(--color-midnight-ink); }
+.view-card--2 { background: #ffe5bf; color: var(--color-midnight-ink); }
+.view-card--3 { background: #fff2db; color: var(--color-midnight-ink); }
+.view-card--4 { background: #fffaf3; color: var(--color-midnight-ink); }
+.view-card[class*="view-card--"] .view-card__go { background: var(--color-midnight-ink); color: var(--color-plaster-white); }
 .view-card__go {
   width: 48px; height: 48px;
   border-radius: 9999px;
