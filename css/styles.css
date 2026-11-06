@@ -112,6 +112,36 @@ h1, h2, h3, h4 { margin: 0; }
 .band--maroon { --bg: var(--color-bordeaux-maroon); --accent: var(--color-lilac-whisper); --ink: var(--color-plaster-white); }
 .band--white  { --bg: var(--color-bone-canvas);    --accent: var(--color-midnight-ink); --ink: var(--color-midnight-ink); }
 
+/* Franja con difuminado en los colores de Beti (beterraga, mejillas, hojas, lima) */
+.band--glow {
+  --bg: #fff6f3;
+  --accent: var(--color-bordeaux-maroon);
+  --ink: var(--color-midnight-ink);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.band--glow::before {
+  content: "";
+  position: absolute;
+  inset: -12%;
+  z-index: -1;
+  background:
+    radial-gradient(38% 46% at 82% 40%, rgba(196, 18, 60, .55), transparent 70%),
+    radial-gradient(30% 36% at 64% 78%, rgba(255, 92, 138, .45), transparent 70%),
+    radial-gradient(34% 40% at 96% 92%, rgba(124, 179, 66, .55), transparent 70%),
+    radial-gradient(32% 38% at 8% 4%, rgba(210, 232, 35, .55), transparent 70%),
+    radial-gradient(26% 30% at 30% 96%, rgba(124, 179, 66, .30), transparent 70%);
+  filter: blur(60px);
+  animation: glow-drift 18s ease-in-out infinite alternate;
+}
+@keyframes glow-drift {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(-2%, 2%, 0) scale(1.06); }
+}
+.band--glow .quick { border: 1px solid rgba(30, 35, 48, .12); }
+.band--glow .sticker { border: 1px solid rgba(30, 35, 48, .10); }
+
 .band .accent { color: var(--accent); }
 .band--first { padding-top: calc(var(--section-gap) + 72px); }
 
