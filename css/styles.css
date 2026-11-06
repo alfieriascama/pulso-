@@ -115,6 +115,7 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
 .band--blue   { --bg: var(--color-cobalt-signal);  --accent: var(--color-voltage-lime); --ink: var(--color-plaster-white); }
 .band--maroon { --bg: var(--color-bordeaux-maroon); --accent: var(--color-plaster-white); --ink: var(--color-plaster-white); }
 .band--white  { --bg: var(--color-bone-canvas);    --accent: var(--color-midnight-ink); --ink: var(--color-midnight-ink); }
+.band--cream  { --bg: var(--color-cream);          --accent: var(--color-midnight-ink); --ink: var(--color-midnight-ink); }
 
 /* Franja con difuminado en los colores de Beti (beterraga, mejillas, hojas, lima) */
 /* Versión oscura: base vino casi negra, manchas intensas y grano sutil */
