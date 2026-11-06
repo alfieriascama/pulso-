@@ -639,8 +639,8 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
   width: 48px; height: 48px;
   display: grid; place-items: center;
   border-radius: 12px;
-  background: #c8102e;
-  color: var(--color-plaster-white);
+  background: var(--color-voltage-lime);
+  color: var(--color-midnight-ink);
 }
 .feat__icon .icon { width: 26px; height: 26px; }
 .feat .heading { color: var(--color-plaster-white); }
