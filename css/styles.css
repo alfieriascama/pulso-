@@ -160,10 +160,39 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
 .band--glow .btn--dark { background: var(--color-voltage-lime); color: var(--color-midnight-ink); }
 .band--glow .btn--dark:hover { background: var(--color-voltage-lime-hover); }
 .band--glow .lead { color: rgba(255, 255, 255, .86); }
-/* Secciones seguidas con difuminado: se alterna el sentido de las manchas
-   y una línea muy suave marca dónde empieza cada una */
-main > .band--glow:nth-child(even)::before { scale: -1 1; }
-main > .band--glow + .band--glow { border-top: 1px solid rgba(255, 255, 255, .07); }
+/* Página completa sobre un único difuminado fijo: sin cortes entre secciones */
+.page-glow { background: #16040a; }
+.page-glow::before,
+.page-glow::after {
+  content: "";
+  position: fixed;
+  pointer-events: none;
+}
+.page-glow::before {
+  inset: -15%;
+  z-index: -2;
+  background:
+    radial-gradient(34% 44% at 80% 44%, rgba(222, 22, 72, .85), transparent 70%),
+    radial-gradient(48% 60% at 60% 60%, rgba(120, 0, 22, .90), transparent 72%),
+    radial-gradient(26% 32% at 66% 86%, rgba(255, 92, 138, .55), transparent 70%),
+    radial-gradient(30% 38% at 98% 96%, rgba(98, 160, 40, .70), transparent 70%),
+    radial-gradient(26% 30% at 4% 0%, rgba(210, 232, 35, .38), transparent 70%),
+    radial-gradient(30% 36% at 22% 100%, rgba(98, 160, 40, .30), transparent 70%);
+  filter: blur(70px) saturate(1.15);
+  animation: glow-drift 16s ease-in-out infinite alternate;
+}
+.page-glow::after {
+  inset: 0;
+  z-index: -1;
+  opacity: .14;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+/* Las secciones quedan transparentes: solo se ve el difuminado de fondo */
+.page-glow .band--glow { background: transparent; overflow: visible; isolation: auto; }
+.page-glow .band--glow::before,
+.page-glow .band--glow::after { display: none; }
+.page-glow .footer { background: transparent; }
 
 .band .accent { color: var(--accent); }
 .band--first { padding-top: calc(var(--section-gap) + 72px); }
