@@ -1466,7 +1466,7 @@ main { overflow-x: clip; }
 .ft__cta-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px 48px; }
 .ft__tagline { margin: 0; font-weight: 900; font-size: clamp(40px, 5vw, 76px); line-height: .9; letter-spacing: -0.05em; }
 .ft__tagline em { font-style: italic; color: var(--ix-cream); }
-.ft__body { padding: 72px 24px 24px; display: grid; grid-template-columns: minmax(0, 1.6fr) repeat(3, minmax(0, 1fr)); gap: 40px; }
+.ft__body { padding: 72px 24px 24px; display: grid; grid-template-columns: minmax(0, 1.8fr) repeat(2, minmax(0, 1fr)); gap: 40px; }
 .ft__brand { display: flex; flex-direction: column; gap: 18px; }
 .ft__brand img { height: 34px; width: auto; align-self: flex-start; }
 .ft__brand p { margin: 0; max-width: 320px; font-size: 15px; line-height: 1.6; font-weight: 500; color: #d9d3c8; }
