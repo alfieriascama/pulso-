@@ -663,6 +663,131 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
   .feat { padding-inline: 0; }
 }
 
+/* ---------- Beneficios: "El doble efecto" ---------- */
+.kicker {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--color-peach);
+  margin-bottom: 14px;
+}
+.dual__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.dual__title {
+  font-size: clamp(56px, 8vw, 104px);
+  font-weight: 800;
+  line-height: .92;
+  letter-spacing: -0.05em;
+  color: var(--color-cream);
+}
+.dual__intro { max-width: 30ch; font-size: 14px; line-height: 1.6; color: var(--color-apricot); padding-bottom: 8px; }
+.dual__axis {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: clamp(40px, 6vw, 64px) 0 clamp(36px, 5vw, 56px);
+}
+.dual__label { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.dual__label--a { color: var(--color-peach); }
+.dual__label--b { color: var(--color-apricot); }
+.dual__line { flex: 1; height: 1px; background: rgba(255, 169, 123, .35); }
+.dual__dot {
+  width: 40px; height: 40px;
+  flex: none;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, var(--color-peach) 50%, var(--color-apricot) 50%);
+}
+.dual__cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(32px, 6vw, 80px); }
+.dual__col { display: grid; gap: 18px; align-content: start; --tone: var(--color-peach); }
+.dual__col--b { --tone: var(--color-apricot); }
+.dual__meta { font-size: 12px; font-weight: 500; letter-spacing: 0; color: var(--tone); }
+.dual__meta strong { font-size: 14px; font-weight: 800; margin-right: 8px; }
+.dual__h { font-size: clamp(32px, 3.6vw, 46px); font-weight: 800; line-height: 1.04; letter-spacing: -0.03em; color: var(--tone); }
+.dual__body { font-size: 15px; line-height: 1.65; color: rgba(255, 242, 219, .9); max-width: 46ch; }
+.dual__body strong { font-weight: 700; color: var(--tone); }
+.dual__tags {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 16px 0 0;
+  border-top: 1px solid rgba(255, 169, 123, .25);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: var(--tone);
+}
+@media (max-width: 760px) { .dual__cols { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Beneficios: "Toma, entrena, recupera" (línea de tiempo) ---------- */
+.ritual__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: clamp(40px, 6vw, 64px);
+}
+.ritual__title {
+  font-size: clamp(44px, 6.4vw, 84px);
+  font-weight: 800;
+  line-height: .98;
+  letter-spacing: -0.045em;
+  color: #2a0a10;
+}
+.ritual__title span { color: var(--color-bordeaux-maroon); }
+.ritual__intro { font-size: 14px; line-height: 1.6; color: rgba(30, 35, 48, .7); padding-bottom: 8px; }
+.ritual__steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.ritual__step { position: relative; display: grid; gap: 6px; padding: 40px 24px 0 0; }
+/* tramo de línea de cada paso */
+.ritual__step::before {
+  content: "";
+  position: absolute;
+  top: 12px; left: 0; right: 0;
+  border-top: 1.5px solid var(--color-bordeaux-maroon);
+  transform: translateY(-50%);
+}
+.ritual__step--2::before { border-top-width: 4px; }
+.ritual__step--4::before { border-top-style: dashed; border-top-color: rgba(120, 0, 22, .55); }
+/* punto de cada paso */
+.ritual__step::after {
+  content: "";
+  position: absolute;
+  top: 12px; left: 0;
+  transform: translateY(-50%);
+  width: 12px; height: 12px;
+  border-radius: 9999px;
+  background: var(--color-bordeaux-maroon);
+}
+.ritual__step--1::after { background: var(--color-peach); }
+.ritual__step--3::after { width: 22px; height: 22px; background: var(--color-cream); border: 2px solid var(--color-bordeaux-maroon); }
+.ritual__step--4::after { width: 11px; height: 11px; background: var(--color-cream); border: 1.5px solid #2a0a10; }
+.ritual__time { font-size: clamp(30px, 3vw, 40px); font-weight: 800; line-height: 1; letter-spacing: -0.03em; color: var(--color-bordeaux-maroon); margin-bottom: 8px; }
+.ritual__step--1 .ritual__time { color: #f2874f; }
+.ritual__name { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; color: #2a0a10; }
+.ritual__note { font-size: 13px; color: rgba(30, 35, 48, .62); }
+.ritual__cta { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin-top: clamp(40px, 5vw, 56px); }
+.ritual__tagline { font-size: 13px; color: rgba(120, 0, 22, .85); }
+@media (max-width: 760px) {
+  .ritual__steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 32px; }
+}
+@media (max-width: 420px) {
+  .ritual__steps { grid-template-columns: minmax(0, 1fr); }
+}
+
 /* ---------- Enlaces a vistas (tarjetas de color) ---------- */
 .view-card {
   border-radius: var(--radius-cards);
