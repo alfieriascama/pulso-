@@ -1333,7 +1333,7 @@ main { overflow-x: clip; }
 .px-pack--hero .px-mini { width: 22px; height: 48px; }
 .px-pack--ink .px-minis { color: var(--ix-peach); }
 .px-pack--peach .px-minis { color: var(--ix-wine); max-width: 240px; gap: 4px; }
-.px-minis--24 .px-mini { width: 10px; height: 22px; }
+.px-minis--12 .px-mini { width: 12px; height: 26px; }
 
 /* ---------- PRODUCTOS · pedido ---------- */
 .px-order { background: var(--ix-bg); padding: 120px 24px; }
