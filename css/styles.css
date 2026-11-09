@@ -789,6 +789,299 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
   .ritual__steps { grid-template-columns: minmax(0, 1fr); }
 }
 
+/* =========================================================
+   Vista Ingredientes (réplica del mockup "mockupingredientes")
+   ========================================================= */
+:root {
+  --ix-wine: #7a0000;
+  --ix-wine-deep: #4a0000;
+  --ix-peach: #ffa270;
+  --ix-cream: #ffe6ba;
+  --ix-paper: #fff3dc;
+  --ix-ink: #1f2133;
+  --ix-bg: #f3f2ef;
+  --ix-muted: #4a4b5c;
+}
+.ix-wrap { max-width: 1240px; margin: 0 auto; }
+.ix-stack-16 { display: flex; flex-direction: column; gap: 16px; }
+.ix-stack-24 { display: flex; flex-direction: column; gap: 24px; }
+.ix-stack-56 { display: flex; flex-direction: column; gap: 56px; }
+.ix-stack-64 { display: flex; flex-direction: column; gap: 64px; }
+.ix-stack-80 { display: flex; flex-direction: column; gap: 80px; }
+.ix-wine { color: var(--ix-wine); }
+.ix-peach { color: var(--ix-peach); }
+.ix-cream { color: var(--ix-cream); }
+.ix-outline { color: transparent; -webkit-text-stroke: 2.5px var(--ix-wine); }
+
+.ix-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px 64px; }
+.ix-head__main { max-width: 640px; }
+.ix-h1 { margin: 0; font-weight: 900; font-size: clamp(56px, 8vw, 120px); line-height: .88; letter-spacing: -0.05em; color: var(--ix-paper); }
+.ix-h1 em { font-style: italic; color: var(--ix-peach); }
+.ix-h2 { margin: 0; font-weight: 900; font-size: clamp(48px, 7vw, 104px); line-height: .9; letter-spacing: -0.05em; color: var(--ix-ink); }
+.ix-h2--md { font-size: clamp(44px, 5.5vw, 80px); line-height: .92; color: var(--ix-paper); }
+.ix-h2--md em { font-style: italic; color: var(--ix-peach); }
+.ix-h2--lg { font-size: clamp(48px, 6.5vw, 96px); }
+.ix-h2 em { font-style: italic; }
+.ix-h2--promo { font-size: clamp(40px, 5vw, 72px); line-height: .92; letter-spacing: -0.045em; color: var(--ix-paper); }
+.ix-h2.ix-wine { color: var(--ix-wine); }
+.ix-h3 { margin: 0; font-weight: 900; font-size: clamp(44px, 5vw, 72px); line-height: .95; letter-spacing: -0.04em; color: var(--ix-ink); }
+.ix-lead { margin: 0; max-width: 440px; font-size: 18px; line-height: 1.55; font-weight: 500; }
+.ix-lead--warm { color: #fbdccb; }
+.ix-lead--muted { max-width: 340px; color: var(--ix-muted); }
+.ix-text { margin: 0; max-width: 520px; font-size: 18px; line-height: 1.55; font-weight: 500; color: #2b2c3d; }
+
+.ix-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.ix-tag { font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; padding: 8px 12px; border-radius: 4px; }
+.ix-tag--sm { font-size: 12px; }
+.ix-tag--ink { background: var(--ix-ink); color: var(--ix-cream); }
+.ix-tag--wine { background: var(--ix-wine); color: var(--ix-paper); }
+.ix-tag--line { border: 2px solid var(--ix-ink); color: var(--ix-ink); }
+
+.ix-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; }
+.ix-btn { min-height: 58px; padding: 0 30px; font-size: 16px; font-weight: 800; }
+.ix-btn--lg { min-height: 60px; padding: 0 32px; font-size: 17px; }
+.ix-ghost {
+  display: inline-flex; align-items: center;
+  min-height: 58px; padding: 0 28px;
+  border-radius: 999px; border: 2px solid var(--ix-paper);
+  color: var(--ix-paper); font-size: 16px; font-weight: 700; text-decoration: none;
+  transition: background .25s, color .25s;
+}
+.ix-ghost:hover { background: var(--ix-paper); color: var(--ix-wine); }
+
+/* Animaciones del mockup */
+@keyframes ix-marquee { to { transform: translateX(-50%); } }
+@keyframes ix-floaty { 50% { transform: translateY(-14px) rotate(-2deg); } }
+@keyframes ix-spin { to { transform: rotate(360deg); } }
+.ix-float { animation: ix-floaty 6s ease-in-out infinite; }
+.ix-float2 { animation: ix-floaty 7s ease-in-out infinite reverse; }
+.ix-spin { animation: ix-spin 20s linear infinite; }
+
+/* ---------- Inicio ---------- */
+.ix-hero {
+  position: relative;
+  background: radial-gradient(120% 90% at 78% 40%, #a3121a 0%, var(--ix-wine) 45%, var(--ix-wine-deep) 100%);
+  color: var(--ix-paper);
+  padding: 120px 24px 0;
+  overflow-x: clip;          /* la cinta inclinada no genera scroll lateral */
+}
+.ix-hero__grid {
+  position: relative; z-index: 2;
+  padding: 32px 0 140px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
+  gap: 48px; align-items: center;
+}
+.ix-hero__copy { display: flex; flex-direction: column; gap: 28px; }
+.ix-chip {
+  align-self: flex-start;
+  font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase;
+  padding: 8px 14px; border: 1.5px solid rgba(255, 243, 220, .5); border-radius: 4px; color: var(--ix-cream);
+}
+.ix-hero__art { position: relative; min-height: 560px; display: flex; align-items: center; justify-content: center; }
+.ix-shot {
+  position: absolute;
+  font-weight: 900; font-size: clamp(140px, 18vw, 260px); letter-spacing: -0.06em; line-height: 1;
+  color: transparent; -webkit-text-stroke: 2px rgba(255, 162, 112, .35); user-select: none;
+}
+.ix-orb {
+  position: absolute; width: 440px; max-width: 90%; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, var(--ix-cream) 0%, var(--ix-peach) 55%, #e8754a 100%);
+  box-shadow: 0 40px 120px -20px rgba(0, 0, 0, .5);
+}
+.ix-bottle { position: relative; z-index: 2; height: 470px; width: auto; filter: drop-shadow(0 30px 30px rgba(40, 0, 0, .45)); }
+.ix-fruit { position: absolute; z-index: 3; }
+.ix-fruit--beet { top: 4%; left: 6%; }
+.ix-fruit--straw { top: 18%; right: 4%; }
+.ix-fruit--lemon { bottom: 8%; left: 2%; }
+.ix-badge { position: absolute; bottom: 4%; right: 6%; z-index: 3; }
+.ix-marquee {
+  position: absolute; left: -2%; right: -2%; bottom: -34px; z-index: 4;
+  transform: rotate(-2deg); background: var(--ix-ink); color: var(--ix-cream);
+  padding: 18px 0; overflow: hidden;
+}
+.ix-marquee__track {
+  display: flex; width: max-content; gap: 40px;
+  font-weight: 900; font-size: 26px; letter-spacing: .02em; text-transform: uppercase; white-space: nowrap;
+  animation: ix-marquee 28s linear infinite;
+}
+.ix-marquee__track i { font-style: normal; color: var(--ix-peach); }
+.ix-marquee__track em { font-style: italic; color: var(--ix-peach); }
+
+/* ---------- Tres ingredientes ---------- */
+.ix-ings { background: var(--ix-bg); padding: 150px 24px 120px; }
+.ix-cards { display: flex; flex-direction: column; gap: 28px; }
+.ix-ing {
+  position: relative;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 24px 56px;
+  padding: 48px 56px; border-radius: 8px;
+  transition: transform .4s ease;
+}
+.ix-ing:hover { transform: translateY(-6px); }
+.ix-ing__num { position: absolute; top: 8px; font-weight: 900; font-size: 160px; line-height: 1; letter-spacing: -0.06em; color: rgba(122, 0, 0, .1); }
+.ix-ing__fruit { flex: 0 0 auto; margin: -90px 0 -30px; transition: transform .6s cubic-bezier(.2, .8, .2, 1); }
+.ix-ing:hover .ix-ing__fruit { transform: rotate(-10deg) scale(1.08); }
+.ix-ing__copy { position: relative; flex: 1 1 360px; display: flex; flex-direction: column; gap: 16px; }
+.ix-ing--1 { background: linear-gradient(110deg, var(--ix-peach) 0%, #ffb98f 100%); }
+.ix-ing--1 .ix-ing__num { right: 32px; color: rgba(122, 0, 0, .12); }
+.ix-ing--1 .ix-ing__fruit { filter: drop-shadow(0 24px 24px rgba(74, 0, 0, .3)); }
+.ix-ing--2 { flex-direction: row-reverse; flex-wrap: wrap-reverse; margin-left: 6%; background: linear-gradient(250deg, var(--ix-cream) 0%, var(--ix-paper) 100%); }
+.ix-ing--2 .ix-ing__num { left: 32px; }
+.ix-ing--2 .ix-ing__fruit { filter: drop-shadow(0 24px 24px rgba(74, 0, 0, .25)); }
+.ix-ing--2 .ix-ing__copy { padding-left: 8%; }
+.ix-ing--3 { margin-right: 6%; background: var(--ix-paper); border: 2px solid var(--ix-ink); }
+.ix-ing--3 .ix-ing__num { right: 32px; }
+.ix-ing--3 .ix-ing__fruit { margin-top: -80px; filter: drop-shadow(0 24px 24px rgba(74, 0, 0, .22)); }
+
+/* ---------- Lo que no está ---------- */
+.ix-zero {
+  position: relative;
+  background: linear-gradient(160deg, var(--ix-wine) 0%, var(--ix-wine-deep) 100%);
+  color: var(--ix-paper);
+  padding: 140px 24px 120px;
+  clip-path: polygon(0 60px, 100% 0, 100% 100%, 0 100%);
+  margin-top: -60px;
+}
+.ix-zero__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 56px 80px; align-items: center; }
+.ix-zero__list {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px;
+  background: rgba(255, 243, 220, .18);
+}
+.ix-zero__list li { display: flex; flex-direction: column; gap: 6px; padding: 32px 28px; background: #5e0000; font-size: 16px; font-weight: 700; }
+.ix-zero__n { font-weight: 900; font-size: 88px; line-height: .9; letter-spacing: -0.05em; }
+.ix-zero__n small { font-size: 40px; }
+
+/* ---------- El doble efecto (con selector) ---------- */
+.ix-dual { background: var(--ix-paper); padding: 120px 24px; }
+.ix-dual .ix-head { gap: 24px 48px; }
+.ix-toggle { display: inline-flex; padding: 5px; border-radius: 999px; background: var(--ix-ink); }
+.ix-toggle button {
+  min-height: 48px; padding: 0 22px; border: 0; border-radius: 999px;
+  font: inherit; font-size: 14px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase;
+  cursor: pointer; background: transparent; color: var(--ix-paper);
+  transition: background .25s, color .25s;
+}
+.ix-toggle button[data-pick="antes"][aria-pressed="true"] { background: var(--ix-peach); color: var(--ix-ink); }
+.ix-toggle button[data-pick="despues"][aria-pressed="true"] { background: var(--ix-cream); color: var(--ix-ink); }
+.ix-panels {
+  position: relative; display: flex; flex-wrap: wrap; min-height: 440px;
+  border-radius: 8px; overflow: hidden; box-shadow: 0 40px 80px -40px rgba(74, 0, 0, .45);
+}
+.ix-panel {
+  flex: 1 1 300px; opacity: .75;
+  text-align: left; border: 0; cursor: pointer; font: inherit; color: var(--ix-ink);
+  padding: 56px 48px; min-height: 440px;
+  display: flex; flex-direction: column; justify-content: flex-end; gap: 18px;
+  transition: flex .5s cubic-bezier(.2, .8, .2, 1), opacity .4s;
+}
+.ix-panel--antes { background: linear-gradient(140deg, #ffb98f 0%, var(--ix-peach) 60%, #f28a5e 100%); }
+.ix-panel--despues { background: linear-gradient(220deg, var(--ix-paper) 0%, var(--ix-cream) 70%); }
+[data-active="antes"] .ix-panel--antes,
+[data-active="despues"] .ix-panel--despues { flex: 1.7 1 420px; opacity: 1; }
+.ix-panel__kicker { font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.ix-panel__title { font-weight: 900; font-size: clamp(36px, 4vw, 60px); line-height: .95; letter-spacing: -0.04em; }
+.ix-panel__more { display: flex; flex-direction: column; gap: 18px; }
+.ix-panel__text { max-width: 520px; font-size: 17px; line-height: 1.6; font-weight: 500; color: #2b2c3d; }
+/* Con JS solo se ve el detalle del momento elegido (sin JS se ven ambos) */
+.js [data-active="antes"] .ix-panel--despues .ix-panel__more,
+.js [data-active="despues"] .ix-panel--antes .ix-panel__more { display: none; }
+
+/* ---------- Cómo tomarlo ---------- */
+.ix-how { background: var(--ix-bg); padding: 120px 24px 140px; }
+.ix-how__bar { height: 10px; border-radius: 999px; background: linear-gradient(90deg, var(--ix-peach) 0%, var(--ix-wine) 38%, var(--ix-cream) 70%, #d8d3ca 100%); }
+.ix-how__steps {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  border-left: 2px solid var(--ix-ink);
+}
+.ix-how__step {
+  display: flex; flex-direction: column; gap: 10px;
+  padding: 36px 28px 40px;
+  border-right: 2px solid var(--ix-ink); border-bottom: 2px solid var(--ix-ink);
+  color: var(--ix-ink); transition: background .3s;
+}
+.ix-how__step:hover { background: var(--ix-cream); }
+.ix-how__step--dark { background: var(--ix-ink); color: var(--ix-paper); }
+.ix-how__step--dark:hover { background: var(--ix-ink); }
+.ix-how__n { font-weight: 900; font-size: 72px; line-height: 1; letter-spacing: -0.05em; }
+.ix-how__n.ix-outline { -webkit-text-stroke-width: 2px; }
+.ix-how__t { font-size: 22px; font-weight: 800; letter-spacing: -0.01em; }
+.ix-how__d { font-size: 16px; line-height: 1.5; font-weight: 500; color: var(--ix-muted); }
+.ix-how__step--dark .ix-how__d { color: #e4dccf; }
+
+/* ---------- Promo de packs ---------- */
+.ix-promo-wrap { padding: 0 24px 120px; background: var(--ix-bg); }
+.ix-promo {
+  position: relative; max-width: 1240px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
+  align-items: center; gap: 32px;
+  padding: 64px clamp(28px, 5vw, 72px); border-radius: 8px;
+  background: linear-gradient(115deg, var(--ix-wine-deep) 0%, var(--ix-wine) 45%, #e8754a 85%, var(--ix-peach) 100%);
+  color: var(--ix-paper); overflow: hidden;
+}
+.ix-promo__mark {
+  position: absolute; right: -40px; bottom: -70px;
+  font-weight: 900; font-style: italic; font-size: 300px; line-height: 1; letter-spacing: -0.06em;
+  color: rgba(255, 243, 220, .1); pointer-events: none;
+}
+.ix-promo__copy { position: relative; }
+.ix-promo__tag {
+  align-self: flex-start;
+  font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase;
+  padding: 8px 12px; border-radius: 4px; background: var(--color-leaf); color: #10200a;
+}
+.ix-promo__alt { font-size: 15px; font-weight: 600; color: var(--ix-cream); }
+.ix-promo__alt:hover { color: var(--ix-paper); }
+.ix-promo__art { position: relative; display: flex; justify-content: center; align-items: flex-end; min-height: 300px; }
+.ix-promo__main { position: relative; z-index: 2; height: 340px; width: auto; filter: drop-shadow(0 24px 24px rgba(40, 0, 0, .5)); }
+.ix-promo__side { height: 262px; width: auto; opacity: .9; }
+.ix-promo__side--l { transform: rotate(-12deg) translateY(10px); margin-right: -6px; }
+.ix-promo__side--r { transform: rotate(12deg) translateY(10px); margin-left: -6px; }
+
+/* ---------- Ajustes para pantallas pequeñas ---------- */
+@media (max-width: 760px) {
+  .ix-hero { padding-top: 104px; }
+  .ix-hero__art { min-height: 460px; }
+  .ix-bottle { height: 380px; }
+  .ix-fruit--beet { width: 92px; height: 92px; }
+  .ix-fruit--straw { width: 80px; height: 80px; }
+  .ix-fruit--lemon { width: 86px; height: 86px; }
+  .ix-badge { width: 110px; height: 110px; }
+  .ix-ings { padding-top: 120px; }
+  .ix-ing { padding: 40px 24px; }
+  .ix-ing--2, .ix-ing--3 { margin-left: 0; margin-right: 0; }
+  .ix-ing--2 .ix-ing__copy { padding-left: 0; }
+  .ix-ing__fruit { width: 160px; height: 160px; margin: -60px 0 -10px; }
+  .ix-ing__num { font-size: 110px; }
+  .ix-zero__list li { padding: 24px 18px; }
+  .ix-zero__n { font-size: 64px; }
+  .ix-panel { padding: 40px 24px; min-height: 0; }
+  .ix-panels { min-height: 0; }
+  .ix-promo__mark { font-size: 180px; bottom: -40px; }
+  .ix-promo__main { height: 260px; }
+  .ix-promo__side { height: 200px; }
+}
+@media (max-width: 520px) {
+  .ix-h1 { font-size: clamp(44px, 15vw, 56px); }
+  .ix-h2, .ix-h2--lg { font-size: clamp(34px, 11.5vw, 48px); }
+  .ix-h2--md { font-size: clamp(32px, 10.5vw, 44px); }
+  .ix-h2--promo { font-size: clamp(30px, 10vw, 40px); }
+  .ix-h3 { font-size: clamp(36px, 12vw, 44px); }
+  .ix-panel { min-width: 0; }
+  [data-active] .ix-panel--antes, [data-active] .ix-panel--despues { flex-basis: 100%; }
+  .ix-panel__title { font-size: clamp(28px, 9vw, 36px); }
+  .ix-toggle button { padding: 0 14px; font-size: 12px; }
+  .ix-how__n { font-size: 56px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ix-float, .ix-float2, .ix-spin, .ix-marquee__track { animation: none !important; }
+}
+
+/* En los fondos vino de Ingredientes, el hover del botón verde pasa a crema */
+.ix-hero .btn--lime:hover,
+.ix-promo .btn--lime:hover { background: var(--ix-paper); color: var(--ix-wine); }
+
 /* ---------- Enlaces a vistas (tarjetas de color) ---------- */
 .view-card {
   border-radius: var(--radius-cards);

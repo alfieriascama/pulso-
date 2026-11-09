@@ -36,6 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Selector "Antes / Después" (Ingredientes)
+  document.querySelectorAll('[data-dual]').forEach((root) => {
+    const set = (k) => {
+      root.dataset.active = k;
+      root.querySelectorAll('.ix-toggle [data-pick]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.pick === k)));
+    };
+    root.querySelectorAll('[data-pick]').forEach((b) => b.addEventListener('click', () => set(b.dataset.pick)));
+  });
+
   // Pedido rápido (portada): pack elegido → WhatsApp
   const quick = document.querySelector('#quick-form');
   if (quick) {
