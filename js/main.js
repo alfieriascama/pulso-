@@ -26,6 +26,43 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
   }
 
+  // Menú lateral (botón hamburguesa en celular y tablet)
+  const drawer = document.getElementById('drawer');
+  const burger = document.querySelector('.nav__burger');
+  const backdrop = document.querySelector('.drawer-backdrop');
+  if (drawer && burger && backdrop) {
+    let hideTimer;
+    const openDrawer = () => {
+      clearTimeout(hideTimer);
+      backdrop.hidden = false;
+      drawer.removeAttribute('inert');
+      drawer.setAttribute('aria-hidden', 'false');
+      burger.setAttribute('aria-expanded', 'true');
+      document.documentElement.classList.add('drawer-open');
+      void drawer.offsetWidth; // fuerza el estado inicial para que la animación de entrada funcione
+      drawer.classList.add('is-open');
+      backdrop.classList.add('is-open');
+      setTimeout(() => drawer.querySelector('.drawer__close')?.focus(), 60);
+    };
+    const closeDrawer = () => {
+      if (!drawer.classList.contains('is-open')) return;
+      const hadFocus = drawer.contains(document.activeElement);
+      drawer.classList.remove('is-open');
+      backdrop.classList.remove('is-open');
+      drawer.setAttribute('inert', '');
+      drawer.setAttribute('aria-hidden', 'true');
+      burger.setAttribute('aria-expanded', 'false');
+      document.documentElement.classList.remove('drawer-open');
+      hideTimer = setTimeout(() => { backdrop.hidden = true; }, 350);
+      if (hadFocus) burger.focus();
+    };
+    burger.addEventListener('click', openDrawer);
+    document.querySelectorAll('[data-drawer-close]').forEach((el) => el.addEventListener('click', closeDrawer));
+    drawer.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeDrawer));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawer(); });
+    window.matchMedia('(min-width: 1061px)').addEventListener('change', (e) => { if (e.matches) closeDrawer(); });
+  }
+
   // Franja superior: se puede cerrar y queda cerrada durante la visita
   const banner = document.querySelector('.banner');
   if (banner) {

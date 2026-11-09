@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=22">
+  <link rel="stylesheet" href="css/styles.css?v=25">
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -32,10 +32,34 @@
       <div class="nav__right">
         <a class="btn btn--ghost nav__ig" href="https://www.instagram.com/pulso.pluss/" target="_blank" rel="noopener">Instagram</a>
         <a class="btn btn--dark nav__cta" href="productos.html#pedido" data-wa="Hola, quiero información de PULSO+">Pedir ahora</a>
-        <button class="nav__toggle" type="button" aria-controls="menu" aria-expanded="false">Menú</button>
+        <button class="nav__burger" type="button" aria-controls="drawer" aria-expanded="false" aria-label="Abrir menú"><span></span><span></span><span></span></button>
       </div>
     </nav>
   </div>
+
+  <div class="drawer-backdrop" data-drawer-close hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Menú de vistas" aria-hidden="true" inert>
+    <div class="drawer__top">
+      <img class="drawer__logo" src="assets/img/pulso-logo-crema.webp" alt="PULSO+" width="1953" height="306">
+      <button class="drawer__close" type="button" data-drawer-close aria-label="Cerrar menú"><span></span><span></span></button>
+    </div>
+    <p class="drawer__kicker">Vistas</p>
+    <nav aria-label="Vistas">
+      <ol class="drawer__list">
+        <li style="--i:0"><a href="index.html"><span class="drawer__n">01</span><span class="drawer__name">Inicio</span><span class="drawer__sub">Toma, entrena, recupera</span></a></li>
+        <li style="--i:1"><a href="beneficios.html"><span class="drawer__n">02</span><span class="drawer__name">Beneficios</span><span class="drawer__sub">Antes y después de entrenar</span></a></li>
+        <li style="--i:2"><a href="ingredientes.html" aria-current="page"><span class="drawer__n">03</span><span class="drawer__name">Ingredientes</span><span class="drawer__sub">Beterraga · Fresa · Limón</span></a></li>
+        <li style="--i:3"><a href="productos.html"><span class="drawer__n">04</span><span class="drawer__name">Productos</span><span class="drawer__sub">Packs de 3, 6 y 12 shots</span></a></li>
+        <li style="--i:4"><a href="faq.html"><span class="drawer__n">05</span><span class="drawer__name">FAQ</span><span class="drawer__sub">Preguntas frecuentes</span></a></li>
+      </ol>
+    </nav>
+    <div class="drawer__foot">
+      <a class="btn btn--lime ix-btn" href="productos.html#pedido" data-wa="Hola, quiero información de PULSO+">Pedir por WhatsApp</a>
+      <a class="drawer__ig" href="https://www.instagram.com/pulso.pluss/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <span class="drawer__mark" aria-hidden="true">PULSO+</span>
+    <img class="drawer__bottle" src="assets/img/pulso-botella-frente-v2.webp" alt="" width="355" height="941" loading="lazy">
+  </aside>
 
   <main>
 
@@ -194,6 +218,6 @@
       </div>
     </div>
   </footer>
-  <script src="js/main.js?v=22"></script>
+  <script src="js/main.js?v=25"></script>
 </body>
 </html>
