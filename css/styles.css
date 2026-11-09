@@ -160,7 +160,9 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
   to { transform: translate3d(-3%, 2%, 0) scale(1.08); }
 }
 .band--glow .btn--dark { background: var(--color-leaf); color: var(--color-midnight-ink); }
-.band--glow .btn--dark:hover { background: var(--color-leaf-hover); }
+.band--glow .btn--dark:hover { background: var(--color-plaster-white); color: var(--color-bordeaux-maroon); }
+/* Dentro de la cajita blanca del pedido rápido, el hover va a vino */
+.band--glow .quick .btn:hover { background: var(--color-bordeaux-maroon); color: var(--color-plaster-white); }
 .band--glow .lead { color: rgba(255, 255, 255, .86); }
 /* Página completa sobre un único difuminado fijo: sin cortes entre secciones */
 .page-glow { background: #16040a; }
@@ -234,12 +236,17 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
   transition: background-color .2s ease, color .2s ease;
 }
 .btn--lime { background: var(--color-leaf); color: var(--color-midnight-ink); }
-.btn--lime:hover { background: var(--color-leaf-hover); }
+.btn--lime:hover { background: var(--color-bordeaux-maroon); color: var(--color-plaster-white); }
+/* Sobre fondos vino u oscuros, el hover pasa a blanco para no perderse */
+.band--maroon .btn--lime:hover,
+.card--maroon .btn--lime:hover,
+.band--glow .btn--lime:hover { background: var(--color-plaster-white); color: var(--color-bordeaux-maroon); }
 .btn--dark { background: #000; color: #fff; font-weight: 500; font-size: 14px; padding: 12px 20px; }
-.btn--dark:hover { background: var(--color-midnight-ink); }
+.btn--dark:hover { background: var(--color-leaf); color: var(--color-midnight-ink); }
 .btn--dark.btn--lg { font-size: 16px; font-weight: 700; padding: 18px 22px; }
 .btn--ghost { background: transparent; color: inherit; font-weight: 500; font-size: 14px; padding: 12px 8px; }
 .btn--ghost:hover { text-decoration: underline; text-underline-offset: 4px; }
+.btn:active { transform: translateY(1px); }
 .btn--block { width: 100%; white-space: normal; text-align: center; line-height: 1.2; }
 .btn .arrow { transition: transform .2s ease; }
 .btn:hover .arrow { transform: translateX(3px); }
