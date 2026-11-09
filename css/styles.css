@@ -910,6 +910,7 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
 
 /* ---------- Tres ingredientes ---------- */
 .ix-ings { background: var(--ix-bg); padding: 150px 24px 120px; }
+.ix-ings--first { padding-top: 140px; }  /* primera sección de Ingredientes: deja espacio al menú flotante */
 .ix-cards { display: flex; flex-direction: column; gap: 28px; }
 .ix-ing {
   position: relative;
