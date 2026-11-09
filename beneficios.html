@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=14">
+  <link rel="stylesheet" href="css/styles.css?v=16">
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -39,57 +39,77 @@
 
   <main>
 
-    <section class="band band--maroon band--first dual" aria-labelledby="h1">
-      <div class="wrap">
-        <div class="dual__head">
-          <div>
-            <p class="kicker">Un shot · Dos momentos</p>
-            <h1 id="h1" class="dual__title">El doble<br>efecto</h1>
-          </div>
-          <p class="dual__intro">Lo mismo que te prepara para el esfuerzo te ayuda a recuperarte de él.</p>
-        </div>
-        <div class="dual__axis" aria-hidden="true">
-          <span class="dual__label dual__label--a">Antes</span>
-          <span class="dual__line"></span>
-          <span class="dual__dot"></span>
-          <span class="dual__line"></span>
-          <span class="dual__label dual__label--b">Después</span>
-        </div>
-        <div class="dual__cols">
-          <article class="dual__col dual__col--a" data-reveal>
-            <p class="dual__meta"><strong>01</strong> Pre-workout natural</p>
-            <h2 class="dual__h">Vasodilatación<br>y resistencia</h2>
-            <p class="dual__body">La beterraga aporta <strong>nitratos naturales</strong> que el cuerpo convierte en <strong>óxido nítrico</strong>, optimizando el flujo de oxígeno a tus músculos y retrasando <strong>la fatiga</strong>.</p>
-            <ul class="dual__tags"><li>Nitratos</li><li>Óxido nítrico</li><li>30–45 min antes</li></ul>
+
+    <section class="bd band--first" aria-labelledby="h1">
+      <div class="bd__bg" aria-hidden="true"><span class="bd__half bd__half--b"></span></div>
+      <span class="bd__vword bd__vword--a" aria-hidden="true">Antes</span>
+      <span class="bd__vword bd__vword--b" aria-hidden="true">Después</span>
+      <div class="ix-wrap bd__wrap">
+        <header class="bd__head" data-reveal>
+          <p class="px-kicker">Un shot · Dos momentos</p>
+          <h1 id="h1" class="bd__title">El doble <em>efecto</em></h1>
+          <p class="bd__intro">Lo mismo que te prepara para el esfuerzo te ayuda a recuperarte de él.</p>
+        </header>
+        <div class="bd__stage">
+          <article class="bd__side bd__side--a" data-reveal>
+            <p class="bd__moment">Antes</p>
+            <p class="bd__meta"><strong>01</strong> Pre-workout natural</p>
+            <h2 class="bd__h">Vasodilatación<br>y resistencia</h2>
+            <p class="bd__body">La beterraga aporta <strong>nitratos naturales</strong> que el cuerpo convierte en <strong>óxido nítrico</strong>, optimizando el flujo de oxígeno a tus músculos y retrasando <strong>la fatiga</strong>.</p>
+            <ul class="bd__tags"><li>Nitratos</li><li>Óxido nítrico</li><li>30–45 min antes</li></ul>
           </article>
-          <article class="dual__col dual__col--b" data-reveal>
-            <p class="dual__meta"><strong>02</strong> Recuperación</p>
-            <h2 class="dual__h">Menos dolor<br>muscular</h2>
-            <p class="dual__body">La fresa y el <strong>limón</strong> concentran <strong>polifenoles</strong> y <strong>vitamina C</strong> que reducen el estrés oxidativo y ayudan a reparar los tejidos más rápido.</p>
-            <ul class="dual__tags"><li>Polifenoles</li><li>Vitamina C</li><li>Justo después</li></ul>
+          <div class="bd__product" aria-hidden="true">
+            <div class="bd__disc"></div>
+            <img class="bd__bottle ix-float" src="assets/img/pulso-botella-34-v2.webp" alt="" width="364" height="960" loading="lazy">
+          </div>
+          <article class="bd__side bd__side--b" data-reveal>
+            <p class="bd__moment">Después</p>
+            <p class="bd__meta"><strong>02</strong> Recuperación</p>
+            <h2 class="bd__h">Menos dolor<br>muscular</h2>
+            <p class="bd__body">La fresa y el <strong>limón</strong> concentran <strong>polifenoles</strong> y <strong>vitamina C</strong> que reducen el estrés oxidativo y ayudan a reparar los tejidos más rápido.</p>
+            <ul class="bd__tags"><li>Polifenoles</li><li>Vitamina C</li><li>Justo después</li></ul>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="band band--cream ritual" aria-labelledby="rutina-h">
-      <div class="wrap">
-        <div class="ritual__head">
-          <h2 id="rutina-h" class="ritual__title">Toma, entrena,<br><span>recupera</span></h2>
-          <p class="ritual__intro">Sin cafeína ni estimulantes artificiales.<br>La energía viene de la fruta.</p>
+
+    <section class="br" aria-labelledby="rutina-h">
+      <div class="ix-wrap">
+        <div class="br__head" data-reveal>
+          <h2 id="rutina-h" class="br__title">Toma, entrena,<br><span>recupera</span></h2>
+          <p class="br__intro">Sin cafeína ni estimulantes artificiales.<br>La energía viene de la fruta.</p>
         </div>
-        <ol class="ritual__steps">
-          <li class="ritual__step ritual__step--1" data-reveal><span class="ritual__time">−45′</span><span class="ritual__name">Toma tu shot</span><span class="ritual__note">Frío y de un solo trago.</span></li>
-          <li class="ritual__step ritual__step--2" data-reveal><span class="ritual__time">0′</span><span class="ritual__name">Entrena</span><span class="ritual__note">Más oxígeno, menos fatiga.</span></li>
-          <li class="ritual__step ritual__step--3" data-reveal><span class="ritual__time">+0′</span><span class="ritual__name">Otro shot</span><span class="ritual__note">Tras sesiones intensas.</span></li>
-          <li class="ritual__step ritual__step--4" data-reveal><span class="ritual__time">+24 h</span><span class="ritual__name">Recupera</span><span class="ritual__note">Listo para volver.</span></li>
-        </ol>
-        <div class="ritual__cta">
-          <a class="btn btn--lime" href="productos.html#packs">Elegir mi pack</a>
-          <span class="ritual__tagline">Un ritual simple: antes, después, y vuelta a empezar.</span>
+        <div class="br__track" data-reveal>
+          <svg class="br__pulse" viewBox="0 0 1200 160" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 80 H30 L50 45 L70 115 L90 80 H270 L292 20 L318 140 L340 80 H570 L592 28 L618 132 L640 80 H870 L890 46 L910 114 L930 80 H1200"/>
+          </svg>
+          <ol class="br__steps">
+            <li class="br__step br__step--1">
+              <div class="br__card"><span class="br__n">−45′</span><span class="br__name">Toma tu shot</span><span class="br__note">Frío y de un solo trago.</span></div>
+              <span class="br__dot" aria-hidden="true"></span>
+            </li>
+            <li class="br__step br__step--2">
+              <div class="br__card"><span class="br__n">0′</span><span class="br__name">Entrena</span><span class="br__note">Más oxígeno, menos fatiga.</span></div>
+              <span class="br__dot" aria-hidden="true"></span>
+            </li>
+            <li class="br__step br__step--3">
+              <div class="br__card"><span class="br__n">+0′</span><span class="br__name">Otro shot</span><span class="br__note">Tras sesiones intensas.</span></div>
+              <span class="br__dot" aria-hidden="true"></span>
+            </li>
+            <li class="br__step br__step--4">
+              <div class="br__card"><span class="br__n">+24 h</span><span class="br__name">Recupera</span><span class="br__note">Listo para volver.</span></div>
+              <span class="br__dot" aria-hidden="true"></span>
+            </li>
+          </ol>
+        </div>
+        <div class="br__cta" data-reveal>
+          <a class="btn btn--lime ix-btn" href="productos.html#packs">Elegir mi pack</a>
+          <span class="br__tagline">Un ritual simple: antes, después, y vuelta a empezar.</span>
         </div>
       </div>
     </section>
+
 
 
     <section class="bx-close" aria-labelledby="cierre-h">
@@ -115,6 +135,6 @@
   </main>
 
 
-  <script src="js/main.js?v=14"></script>
+  <script src="js/main.js?v=16"></script>
 </body>
 </html>

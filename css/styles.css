@@ -1727,3 +1727,138 @@ main { overflow-x: clip; }
   .hx-tile__go { position: static; align-self: flex-start; margin-top: 10px; width: 46px; height: 46px; }
 }
 
+/* =========================================================
+   Beneficios · "El doble efecto" (pantalla dividida en diagonal)
+   ========================================================= */
+.bd {
+  position: relative; overflow: hidden;
+  color: var(--ix-paper);
+  background: radial-gradient(80% 90% at 15% 30%, #a3121a 0%, var(--ix-wine) 40%, var(--ix-wine-deep) 100%);
+}
+.bd.band--first { padding: 128px 24px 110px; }
+.bd__bg { position: absolute; inset: 0; z-index: 0; }
+.bd__half--b {
+  position: absolute; inset: 0;
+  background: linear-gradient(200deg, #2a1320 0%, var(--ix-ink) 60%, #14151f 100%);
+  clip-path: polygon(60% 0, 100% 0, 100% 100%, 44% 100%);
+}
+.bd__vword {
+  position: absolute; top: 50%; z-index: 1;
+  writing-mode: vertical-rl;
+  font-weight: 900; text-transform: uppercase; font-size: clamp(110px, 13vw, 210px); line-height: .8; letter-spacing: -0.04em;
+  color: transparent; user-select: none; pointer-events: none;
+}
+.bd__vword--a { left: -1%; transform: translateY(-50%) rotate(180deg); -webkit-text-stroke: 2px rgba(255, 162, 112, .16); }
+.bd__vword--b { right: -1%; transform: translateY(-50%); -webkit-text-stroke: 2px rgba(255, 230, 186, .12); }
+.bd__wrap { position: relative; z-index: 2; }
+.bd__head { max-width: 780px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 18px; }
+.bd__title { margin: 0; font-weight: 900; font-size: clamp(56px, 8vw, 128px); line-height: .88; letter-spacing: -0.05em; color: var(--ix-paper); }
+.bd__title em { font-style: italic; color: var(--ix-peach); }
+.bd__intro { margin: 0; max-width: 420px; font-size: 17px; line-height: 1.55; font-weight: 500; color: var(--ix-cream); }
+.bd__stage { margin-top: 48px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 360px) minmax(0, 1fr); gap: 40px; align-items: center; }
+.bd__product { position: relative; min-height: 520px; display: grid; place-items: center; }
+.bd__disc {
+  position: absolute; width: 360px; max-width: 100%; aspect-ratio: 1; border-radius: 50%;
+  background: linear-gradient(90deg, var(--ix-peach) 50%, var(--ix-cream) 50%);
+  transform: rotate(14deg);
+  box-shadow: 0 40px 120px -20px rgba(0, 0, 0, .6);
+}
+.bd__bottle { position: relative; z-index: 2; height: 480px; width: auto; transform: rotate(-6deg); filter: drop-shadow(0 34px 34px rgba(10, 0, 0, .55)); }
+.bd__side { display: flex; flex-direction: column; gap: 14px; transition: transform .35s ease; --tone: var(--ix-peach); }
+.bd__side:hover { transform: translateY(-4px); }
+.bd__side--a { text-align: right; align-items: flex-end; }
+.bd__side--b { --tone: var(--ix-cream); }
+.bd__moment { margin: 0; display: inline-flex; align-items: center; gap: 12px; font-size: 13px; font-weight: 900; letter-spacing: .22em; text-transform: uppercase; color: var(--tone); }
+.bd__moment::before { content: ""; width: 40px; height: 2px; background: currentColor; }
+.bd__side--a .bd__moment { flex-direction: row-reverse; }
+.bd__meta { margin: 0; font-size: 12px; font-weight: 500; color: var(--tone); }
+.bd__meta strong { font-size: 14px; font-weight: 900; margin-right: 6px; }
+.bd__h { margin: 0; font-weight: 900; font-size: clamp(32px, 3.4vw, 50px); line-height: 1.02; letter-spacing: -0.035em; color: var(--tone); }
+.bd__body { margin: 0; max-width: 40ch; font-size: 15.5px; line-height: 1.65; color: rgba(255, 242, 219, .88); }
+.bd__body strong { font-weight: 800; color: var(--tone); }
+.bd__tags { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.bd__side--a .bd__tags { justify-content: flex-end; }
+.bd__tags li { font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; padding: 7px 10px; border-radius: 4px; background: var(--tone); color: var(--ix-ink); }
+
+/* =========================================================
+   Beneficios · "Toma, entrena, recupera" (línea de pulso)
+   ========================================================= */
+.br {
+  background-color: var(--ix-paper);
+  background-image:
+    linear-gradient(rgba(122, 0, 0, .06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(122, 0, 0, .06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  color: var(--ix-ink);
+  padding: 120px 24px;
+}
+.br__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px 48px; }
+.br__title { margin: 0; font-weight: 900; font-size: clamp(48px, 6.6vw, 100px); line-height: .92; letter-spacing: -0.05em; color: #2a0a10; }
+.br__title span { font-style: italic; color: var(--ix-wine); }
+.br__intro { margin: 0; font-size: 15px; line-height: 1.6; color: var(--ix-muted); }
+.br__track { position: relative; margin-top: 48px; }
+.br__pulse { position: absolute; left: 0; top: 50%; width: 100%; height: 160px; transform: translateY(-50%); overflow: visible; }
+.br__pulse path { fill: none; stroke: var(--ix-wine); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+/* La línea se dibuja al aparecer la sección (solo con JS) */
+.js .br__track .br__pulse path { stroke-dasharray: 3000; stroke-dashoffset: 3000; transition: stroke-dashoffset 2.2s cubic-bezier(.4, 0, .2, 1) .2s; }
+.js .br__track.is-in .br__pulse path { stroke-dashoffset: 0; }
+.br__steps { position: relative; z-index: 1; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); min-height: 500px; }
+.br__step { display: grid; grid-template-rows: 1fr 28px 1fr; justify-items: center; }
+.br__dot { grid-row: 2; align-self: center; width: 22px; height: 22px; border-radius: 50%; border: 3px solid var(--ix-wine); background: var(--ix-paper); }
+.br__step--1 .br__dot { background: var(--ix-peach); }
+.br__step--2 .br__dot { background: var(--ix-wine); }
+.br__step--3 .br__dot { width: 30px; height: 30px; background: var(--ix-cream); }
+.br__step--4 .br__dot { border-style: dashed; }
+.br__card {
+  width: min(100%, 240px);
+  display: flex; flex-direction: column; gap: 6px;
+  background: #fffaf0; border: 2px solid var(--ix-ink); border-radius: 6px;
+  padding: 20px 22px;
+  box-shadow: 8px 8px 0 var(--ix-wine);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.br__card:hover { transform: translate(-3px, -3px); box-shadow: 11px 11px 0 var(--ix-wine); }
+.br__step--1 .br__card, .br__step--3 .br__card { grid-row: 1; align-self: end; margin-bottom: 18px; }
+.br__step--2 .br__card, .br__step--4 .br__card { grid-row: 3; align-self: start; margin-top: 18px; }
+.br__step--1 .br__dot, .br__step--3 .br__dot { grid-row: 2; }
+.br__step--2 .br__card { background: var(--ix-ink); color: var(--ix-paper); box-shadow: 8px 8px 0 var(--ix-peach); }
+.br__step--2 .br__card:hover { box-shadow: 11px 11px 0 var(--ix-peach); }
+.br__n { font-weight: 900; font-size: 52px; line-height: 1; letter-spacing: -0.05em; color: var(--ix-wine); }
+.br__step--1 .br__n { color: #f2874f; }
+.br__step--2 .br__n { color: var(--ix-peach); }
+.br__step--4 .br__n { color: transparent; -webkit-text-stroke: 2px var(--ix-wine); }
+.br__name { font-size: 18px; font-weight: 800; letter-spacing: -0.01em; }
+.br__note { font-size: 14px; line-height: 1.5; color: var(--ix-muted); }
+.br__step--2 .br__note { color: #e4dccf; }
+.br__cta { margin-top: 48px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; }
+.br__tagline { font-size: 15px; font-weight: 700; color: var(--ix-wine); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  .bd__stage { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .bd__product { order: -1; min-height: 440px; }
+  .bd__bottle { height: 400px; }
+  .bd__side--a { text-align: left; align-items: flex-start; }
+  .bd__side--a .bd__moment { flex-direction: row; }
+  .bd__side--a .bd__tags { justify-content: flex-start; }
+  .bd__half--b { clip-path: polygon(0 66%, 100% 58%, 100% 100%, 0 100%); }
+  .bd__vword { display: none; }
+}
+@media (max-width: 760px) {
+  .br { padding: 90px 20px; }
+  .br__pulse { display: none; }
+  .br__steps { grid-template-columns: minmax(0, 1fr); min-height: 0; margin-left: 11px; border-left: 3px solid var(--ix-wine); }
+  .br__step { display: block; position: relative; padding: 0 0 28px 30px; }
+  .br__step:last-child { padding-bottom: 0; }
+  .br__dot { position: absolute; left: -13px; top: 24px; }
+  .br__step--3 .br__dot { left: -17px; }
+  .br__card { width: auto; margin: 0 !important; }
+}
+@media (max-width: 560px) {
+  .bd.band--first { padding: 112px 20px 90px; }
+  .bd__product { min-height: 380px; }
+  .bd__disc { width: 280px; }
+  .bd__bottle { height: 340px; }
+  .bd__title { font-size: clamp(44px, 14vw, 60px); }
+}
+
