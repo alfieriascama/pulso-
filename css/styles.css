@@ -298,15 +298,16 @@ h1, h2, h3, h4 { margin: 0; overflow-wrap: break-word; hyphens: auto; }
 /* ---------- Navegación flotante (píldora blanca) ---------- */
 .nav-holder {
   position: sticky;
-  top: 12px;
+  top: 0;
   z-index: 50;
   height: 0;
   padding: 0 var(--gutter);
 }
 .nav {
   position: relative;
+  top: 12px;                 /* flota sin empujar la página (no deja hueco arriba) */
   max-width: var(--page-max-width);
-  margin: 12px auto 0;
+  margin: 0 auto;
   background: var(--color-plaster-white);
   border-radius: var(--radius-pills);
   min-height: 64px;
