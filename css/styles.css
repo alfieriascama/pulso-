@@ -1636,11 +1636,11 @@ main { overflow-x: clip; }
 .hx-tile__go {
   position: absolute; right: 28px; bottom: 28px;
   width: 52px; height: 52px; border-radius: 50%;
-  display: grid; place-items: center; font-size: 20px;
+  display: grid; place-items: center; font-size: 30px; font-weight: 500; line-height: 1;
   background: var(--ix-ink); color: var(--ix-paper);
   transition: transform .35s ease, background .35s ease;
 }
-.hx-tile:hover .hx-tile__go { transform: rotate(-45deg); background: var(--ix-wine); }
+.hx-tile:hover .hx-tile__go { transform: rotate(90deg); background: var(--ix-wine); }
 
 /* Productos: bloque grande */
 .hx-tile--prod {
