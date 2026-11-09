@@ -10,12 +10,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=5">
+  <link rel="stylesheet" href="css/styles.css?v=7">
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
   <div class="banner">
-    Shot funcional <strong>100% natural, sin azúcar añadida</strong> — <a href="packs.html#pedido" data-wa="Hola, quiero información de PULSO+">Pide el tuyo por WhatsApp</a>
+    Shot funcional <strong>100% natural, sin azúcar añadida</strong> — <a href="productos.html#pedido" data-wa="Hola, quiero información de PULSO+">Pide el tuyo por WhatsApp</a>
     <button class="banner__close" type="button" aria-label="Cerrar aviso">×</button>
   </div>
 
@@ -26,13 +26,12 @@
         <li><a href="index.html">Inicio</a></li>
         <li><a href="beneficios.html">Beneficios</a></li>
         <li><a href="ingredientes.html">Ingredientes</a></li>
-        <li><a href="producto.html">Producto</a></li>
-        <li><a href="packs.html">Packs</a></li>
+        <li><a href="productos.html">Productos</a></li>
         <li><a href="faq.html" aria-current="page">FAQ</a></li>
       </ul>
       <div class="nav__right">
         <a class="btn btn--ghost nav__ig" href="https://www.instagram.com/pulso.pluss/" target="_blank" rel="noopener">Instagram</a>
-        <a class="btn btn--dark nav__cta" href="packs.html#pedido" data-wa="Hola, quiero información de PULSO+">Pedir ahora</a>
+        <a class="btn btn--dark nav__cta" href="productos.html#pedido" data-wa="Hola, quiero información de PULSO+">Pedir ahora</a>
         <button class="nav__toggle" type="button" aria-controls="menu" aria-expanded="false">Menú</button>
       </div>
     </nav>
@@ -40,88 +39,117 @@
 
   <main>
 
-    <section class="band band--glow band--first" aria-labelledby="h1">
-      <div class="wrap">
-        <div class="center-head">
-          <h1 id="h1" class="display">¿Preguntas? Respondidas</h1>
-          <p class="lead">Lo que siempre nos preguntan sobre PULSO+.</p>
+    <section class="fq-hero" aria-labelledby="h1">
+      <div class="ix-wrap fq-hero__grid">
+        <div class="fq-hero__copy">
+          <p class="px-kicker">FAQ · PULSO+</p>
+          <h1 id="h1" class="px-h1">¿Preguntas?<br><em>Respondidas</em></h1>
+          <p class="px-lead">Lo que siempre nos preguntan sobre PULSO+.</p>
+          <nav class="fq-chips" aria-label="Ir a una pregunta"><a class="fq-chip" href="#q1">¿Cuándo debo tomar PULSO+?</a><a class="fq-chip" href="#q2">¿Necesita refrigeración?</a><a class="fq-chip" href="#q3">¿Contiene azúcares añadidos o cafeína?</a><a class="fq-chip" href="#q4">¿Puedo tomarlo si no entreno?</a><a class="fq-chip" href="#q5">¿Cómo hago mi pedido?</a></nav>
         </div>
-        <div class="faq" data-reveal>
-          <details open>
-            <summary>¿Cuándo debo tomar PULSO+?<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 5 5 5-5"/></svg></summary>
-            <div class="answer"><p>Recomendamos tomarlo entre 30 y 45 minutos antes de entrenar para maximizar los efectos del óxido nítrico, o inmediatamente después de una sesión intensa para acelerar la recuperación.</p></div>
+        <div class="fq-hero__art">
+          <span class="fq-hero__mark" aria-hidden="true">?</span>
+          <span class="fq-bubble">¡Pregúntale a Beti!</span>
+          <img class="fq-hero__beti ix-float2" src="assets/img/beti-mascota.webp" alt="Beti, la mascota beterraga, corriendo" width="885" height="1369" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <section class="fq-list" aria-label="Preguntas frecuentes">
+      <div class="ix-wrap fq-list__grid">
+        <aside class="fq-aside" data-reveal>
+          <p class="fq-aside__count">05</p>
+          <p class="fq-aside__label">preguntas frecuentes</p>
+          <p class="fq-aside__text">¿No encuentras tu respuesta? Beti contesta por WhatsApp.</p>
+          <a class="btn btn--lime ix-btn" href="productos.html#pedido" data-wa="Hola, quiero información de PULSO+">Escríbenos por WhatsApp</a>
+        </aside>
+        <div class="fq-items" data-reveal>
+          <details class="fq-item" id="q1" open>
+            <summary><span class="fq-item__n">01</span><span class="fq-item__q">¿Cuándo debo tomar PULSO+?</span><span class="fq-item__icon" aria-hidden="true"></span></summary>
+            <div class="fq-item__a"><p>Recomendamos tomarlo entre 30 y 45 minutos antes de entrenar para maximizar los efectos del óxido nítrico, o inmediatamente después de una sesión intensa para acelerar la recuperación.</p></div>
           </details>
-          <details>
-            <summary>¿Necesita refrigeración?<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 5 5 5-5"/></svg></summary>
-            <div class="answer"><p>Se recomienda mantenerlo frío para disfrutar de un sabor más refrescante, aunque conserva su estabilidad en un lugar fresco y seco.</p></div>
+          <details class="fq-item" id="q2">
+            <summary><span class="fq-item__n">02</span><span class="fq-item__q">¿Necesita refrigeración?</span><span class="fq-item__icon" aria-hidden="true"></span></summary>
+            <div class="fq-item__a"><p>Se recomienda mantenerlo frío para disfrutar de un sabor más refrescante, aunque conserva su estabilidad en un lugar fresco y seco.</p></div>
           </details>
-          <details>
-            <summary>¿Contiene azúcares añadidos o cafeína?<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 5 5 5-5"/></svg></summary>
-            <div class="answer"><p>No. Todo el dulzor y la energía provienen 100% de la fruta fresca. Sin estimulantes artificiales ni cafeína.</p></div>
+          <details class="fq-item" id="q3">
+            <summary><span class="fq-item__n">03</span><span class="fq-item__q">¿Contiene azúcares añadidos o cafeína?</span><span class="fq-item__icon" aria-hidden="true"></span></summary>
+            <div class="fq-item__a"><p>No. Todo el dulzor y la energía provienen 100% de la fruta fresca. Sin estimulantes artificiales ni cafeína.</p></div>
           </details>
-          <details>
-            <summary>¿Puedo tomarlo si no entreno?<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 5 5 5-5"/></svg></summary>
-            <div class="answer"><p>Sí. Es un shot de fruta natural que puedes incluir en tu día a día. Si tienes alguna condición médica o estás en tratamiento, consulta antes con tu médico.</p></div>
+          <details class="fq-item" id="q4">
+            <summary><span class="fq-item__n">04</span><span class="fq-item__q">¿Puedo tomarlo si no entreno?</span><span class="fq-item__icon" aria-hidden="true"></span></summary>
+            <div class="fq-item__a"><p>Sí. Es un shot de fruta natural que puedes incluir en tu día a día. Si tienes alguna condición médica o estás en tratamiento, consulta antes con tu médico.</p></div>
           </details>
-          <details>
-            <summary>¿Cómo hago mi pedido?<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 5 5 5-5"/></svg></summary>
-            <div class="answer"><p>Escríbenos por WhatsApp o arma tu pedido en la vista de <a href="packs.html#pedido">Packs</a>; te respondemos para coordinar la entrega.</p></div>
+          <details class="fq-item" id="q5">
+            <summary><span class="fq-item__n">05</span><span class="fq-item__q">¿Cómo hago mi pedido?</span><span class="fq-item__icon" aria-hidden="true"></span></summary>
+            <div class="fq-item__a"><p>Escríbenos por WhatsApp o arma tu pedido en la vista de <a href="productos.html#pedido">Productos</a>; te respondemos para coordinar la entrega.</p></div>
           </details>
         </div>
       </div>
     </section>
 
-    <section class="band band--maroon" aria-labelledby="contacto-h">
-      <div class="wrap split">
-        <div class="stack">
-          <h2 id="contacto-h" class="display-alt">¿Listo para tu primer shot?</h2>
-          <p class="lead">Escríbenos y te ayudamos a elegir el pack que va con tu ritmo.</p>
-          <div class="actions">
-            <a class="btn btn--lime" href="packs.html#pedido" data-wa="Hola, quiero información de PULSO+">Pedir por WhatsApp</a>
-            <a class="btn btn--ghost" href="https://www.instagram.com/pulso.pluss/" target="_blank" rel="noopener">Síguenos en Instagram</a>
+    <section class="fq-cta" aria-labelledby="contacto-h">
+      <div class="ix-wrap fq-cta__grid">
+        <div class="fq-cta__copy" data-reveal>
+          <h2 id="contacto-h" class="px-h2 px-h2--xl">¿Listo para tu<br><em>primer shot</em>?</h2>
+          <p class="px-lead">Escríbenos y te ayudamos a elegir el pack que va con tu ritmo.</p>
+          <div class="ix-actions">
+            <a class="btn btn--lime ix-btn" href="productos.html#pedido" data-wa="Hola, quiero información de PULSO+">Pedir por WhatsApp</a>
+            <a class="ix-ghost" href="https://www.instagram.com/pulso.pluss/" target="_blank" rel="noopener">Síguenos en Instagram</a>
           </div>
         </div>
-        <div class="showcase showcase--maroon" data-reveal>
-          <span class="sticker sticker--lime sticker--1">Pequeño shot</span>
-          <span class="sticker sticker--2">Grandes resultados</span>
-          <img src="assets/img/pulso-botella-frase-v2.webp" alt="Lateral de la botella PULSO+: pequeño shot, grandes resultados" width="341" height="941" loading="lazy">
+        <div class="fq-cta__art" aria-hidden="true">
+          <span class="fq-cta__word">SHOT</span>
+          <img class="fq-cta__bottle ix-float" src="assets/img/pulso-botella-frase-v2.webp" alt="" width="341" height="941" loading="lazy">
+          <span class="px-chip px-chip--a">Pequeño shot</span>
+          <span class="px-chip px-chip--b">Grandes resultados</span>
         </div>
       </div>
     </section>
 
   </main>
 
-  <footer class="footer">
-    <div class="footer__card">
-      <div class="footer__brand">
-        <img src="assets/img/pulso-logo.webp" alt="PULSO+" width="1953" height="306" loading="lazy">
-        <p class="small">Shot funcional de beterraga, fresa y limón. 60 ml de energía natural, de la mano de Beti.</p>
-        <div><a class="btn btn--lime" href="packs.html#pedido" data-wa="Hola, quiero información de PULSO+">Pedir por WhatsApp</a></div>
+  <footer class="ft">
+    <div class="ft__cta">
+      <div class="ix-wrap ft__cta-inner">
+        <p class="ft__tagline">Pequeño shot<br><em>Grandes resultados</em></p>
+        <div class="ix-actions">
+          <a class="btn btn--lime ix-btn" href="productos.html#pedido" data-wa="Hola, quiero información de PULSO+">Pedir por WhatsApp</a>
+          <a class="ix-ghost" href="https://www.instagram.com/pulso.pluss/" target="_blank" rel="noopener">Instagram</a>
+        </div>
       </div>
-      <div class="footer__col">
+    </div>
+    <div class="ix-wrap ft__body">
+      <div class="ft__brand">
+        <img src="assets/img/pulso-logo-crema.webp" alt="PULSO+" width="1953" height="306" loading="lazy">
+        <p>Shot funcional de beterraga, fresa y limón. 60 ml de energía natural, de la mano de Beti.</p>
+      </div>
+      <nav class="ft__col" aria-label="Vistas">
         <h4>Vistas</h4>
-        <a href="index.html">Inicio</a>
-        <a href="beneficios.html">Beneficios</a>
-        <a href="ingredientes.html">Ingredientes</a>
-        <a href="producto.html">Producto</a>
-        <a href="packs.html">Packs</a>
-        <a href="faq.html">FAQ</a>
-      </div>
-      <div class="footer__col">
+          <a href="index.html">Inicio</a>
+          <a href="beneficios.html">Beneficios</a>
+          <a href="ingredientes.html">Ingredientes</a>
+          <a href="productos.html">Productos</a>
+          <a href="faq.html">FAQ</a>
+      </nav>
+      <div class="ft__col">
         <h4>Redes</h4>
         <a href="https://www.instagram.com/pulso.pluss/" target="_blank" rel="noopener">Instagram</a>
       </div>
-      <div class="footer__col">
+      <div class="ft__col">
         <h4>Legal</h4>
         <a href="#">Política de privacidad</a>
         <a href="#">Términos y condiciones</a>
       </div>
     </div>
-    <div class="footer__bottom">
-      <span>© <span data-year>2026</span> Beti · PULSO+ — Todos los derechos reservados</span>
-      <span>* Producto natural. No reemplaza una alimentación balanceada.</span>
+    <div class="ft__mark" aria-hidden="true"><img src="assets/img/pulso-logo-crema.webp" alt="" width="1953" height="306" loading="lazy"></div>
+    <div class="ft__bottom">
+      <div class="ix-wrap ft__bottom-inner">
+        <span>© <span data-year>2026</span> Beti · PULSO+ — Todos los derechos reservados</span>
+        <span>* Producto natural. No reemplaza una alimentación balanceada.</span>
+      </div>
     </div>
   </footer>
-  <script src="js/main.js?v=5"></script>
+  <script src="js/main.js?v=7"></script>
 </body>
 </html>
