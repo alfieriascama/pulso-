@@ -1979,4 +1979,4 @@ main { overflow-x: clip; }
 @media (max-height: 640px) { .drawer > .drawer__bottle { display: none; } }
 @media (prefers-reduced-motion: reduce) { .drawer, .drawer__list li { transition: none !important; } }
 
-.ft__credit { font-size: 11px; letter-spacing: .04em; opacity: .7; }
+.ft__credit { font-size: 9px; letter-spacing: .06em; opacity: .55; }
