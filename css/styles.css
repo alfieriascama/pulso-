@@ -1544,3 +1544,186 @@ main { overflow-x: clip; }
   .fq-hero .px-h1 { font-size: clamp(34px, 11.5vw, 48px); }
 }
 
+/* =========================================================
+   Inicio · "Todo lo bueno de la beterraga" (anatomía del producto)
+   ========================================================= */
+.hx-benefits {
+  position: relative; overflow: hidden;
+  background:
+    radial-gradient(55% 60% at 50% 66%, rgba(163, 18, 26, .9) 0%, transparent 70%),
+    linear-gradient(170deg, var(--ix-wine) 0%, var(--ix-wine-deep) 100%);
+  color: var(--ix-paper);
+  padding: 120px 24px 130px;
+}
+.hx-benefits__ghost {
+  position: absolute; left: 50%; top: 64%; transform: translate(-50%, -50%);
+  font-weight: 900; font-size: clamp(260px, 34vw, 560px); line-height: .8; letter-spacing: -0.07em;
+  color: transparent; -webkit-text-stroke: 2px rgba(255, 162, 112, .12);
+  white-space: nowrap; user-select: none; pointer-events: none;
+}
+.hx-benefits__ghost small { font-size: .3em; }
+.hx-benefits__head { position: relative; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 28px 56px; }
+.hx-benefits__side { display: flex; flex-direction: column; gap: 22px; max-width: 440px; }
+.hx-anatomy {
+  position: relative;
+  margin-top: 72px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 380px) minmax(0, 1fr);
+  grid-template-areas: "a p b" "c p b";
+  gap: 28px 64px;
+  align-items: center;
+}
+.hx-anatomy__product { grid-area: p; position: relative; min-height: 540px; display: grid; place-items: center; }
+.hx-anatomy__disc {
+  position: absolute; width: 340px; max-width: 100%; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle at 38% 32%, var(--ix-cream) 0%, var(--ix-peach) 55%, #e8754a 100%);
+  box-shadow: 0 40px 120px -20px rgba(0, 0, 0, .55);
+}
+.hx-anatomy__orbit { position: absolute; width: 460px; max-width: 120%; aspect-ratio: 1; border-radius: 50%; border: 2px dashed rgba(255, 243, 220, .28); }
+.hx-anatomy__bottle { position: relative; z-index: 2; height: 500px; width: auto; transform: rotate(-6deg); filter: drop-shadow(0 34px 34px rgba(20, 0, 0, .55)); }
+.hx-note {
+  position: relative;
+  padding: 26px 28px;
+  background: rgba(31, 33, 51, .55);
+  border: 1px solid rgba(255, 243, 220, .14);
+  border-radius: 8px;
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  display: flex; flex-direction: column; gap: 12px;
+  transition: transform .35s ease, border-color .35s ease, background .35s ease;
+}
+.hx-note:hover { transform: translateY(-4px); border-color: rgba(255, 162, 112, .7); background: rgba(31, 33, 51, .75); }
+.hx-note--a { grid-area: a; align-self: end; }
+.hx-note--b { grid-area: b; }
+.hx-note--c { grid-area: c; align-self: start; }
+.hx-note__top { display: flex; justify-content: space-between; align-items: center; }
+.hx-note__n { font-weight: 900; font-size: 46px; line-height: 1; letter-spacing: -0.05em; color: transparent; -webkit-text-stroke: 1.5px var(--ix-peach); }
+.hx-note__title { margin: 0; font-weight: 900; font-size: 24px; line-height: 1.1; letter-spacing: -0.03em; color: var(--ix-paper); }
+.hx-note__text { margin: 0; font-size: 15px; line-height: 1.55; color: rgba(255, 226, 226, .82); }
+/* Líneas que conectan cada beneficio con la botella */
+.hx-note__link { position: absolute; top: 50%; width: 52px; height: 2px; background: rgba(255, 162, 112, .65); }
+.hx-note__link::after { content: ""; position: absolute; top: 50%; width: 10px; height: 10px; border-radius: 50%; background: var(--ix-peach); transform: translateY(-50%); }
+.hx-note--a .hx-note__link, .hx-note--c .hx-note__link { right: -53px; }
+.hx-note--a .hx-note__link::after, .hx-note--c .hx-note__link::after { right: -4px; }
+.hx-note--b .hx-note__link { left: -53px; }
+.hx-note--b .hx-note__link::after { left: -4px; }
+.hx-benefits .btn--lime:hover { background: var(--ix-paper); color: var(--ix-wine); }
+
+/* =========================================================
+   Inicio · "Explora PULSO+" (mosaico de categorías)
+   ========================================================= */
+.hx-explore { position: relative; overflow: hidden; background: var(--ix-bg); padding: 110px 24px 120px; }
+.hx-explore__mark {
+  position: absolute; right: -2%; top: 40px;
+  font-weight: 900; font-size: clamp(160px, 22vw, 340px); line-height: .8; letter-spacing: -0.06em;
+  color: transparent; -webkit-text-stroke: 2px rgba(122, 0, 0, .08); user-select: none; pointer-events: none;
+}
+.hx-explore__head { position: relative; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 40px; }
+.hx-explore__intro { margin: 0; font-size: 14px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--ix-wine); }
+.hx-bento {
+  position: relative; margin-top: 48px;
+  display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); grid-template-rows: minmax(300px, 1fr) minmax(300px, 1fr);
+  gap: 18px;
+}
+.hx-tile {
+  position: relative; overflow: hidden; border-radius: 8px; padding: 36px;
+  display: flex; flex-direction: column; justify-content: flex-end; gap: 10px;
+  text-decoration: none;
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.hx-tile:hover { transform: translateY(-6px); box-shadow: 0 34px 60px -34px rgba(74, 0, 0, .6); }
+.hx-tile__kicker { margin: 0; font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.hx-tile__title { margin: 0; font-weight: 900; font-size: clamp(40px, 4vw, 64px); line-height: .92; letter-spacing: -0.045em; }
+.hx-tile__go {
+  position: absolute; right: 28px; bottom: 28px;
+  width: 52px; height: 52px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 20px;
+  background: var(--ix-ink); color: var(--ix-paper);
+  transition: transform .35s ease, background .35s ease;
+}
+.hx-tile:hover .hx-tile__go { transform: rotate(-45deg); background: var(--ix-wine); }
+
+/* Productos: bloque grande */
+.hx-tile--prod {
+  grid-row: span 2; padding: 44px;
+  background: linear-gradient(150deg, var(--ix-ink) 0%, #2a1320 55%, var(--ix-wine) 100%);
+  color: var(--ix-paper);
+}
+.hx-tile__big {
+  position: absolute; top: 24px; left: 32px;
+  font-weight: 900; font-size: clamp(110px, 12vw, 180px); line-height: .8; letter-spacing: -0.06em;
+  color: transparent; -webkit-text-stroke: 2px rgba(255, 162, 112, .18);
+}
+.hx-tile__copy { position: relative; z-index: 2; max-width: 56%; display: flex; flex-direction: column; gap: 12px; }
+.hx-tile--prod .hx-tile__kicker { color: var(--ix-peach); }
+.hx-tile--prod .hx-tile__title { font-size: clamp(44px, 4.6vw, 72px); overflow-wrap: normal; hyphens: manual; }
+.hx-tile__sub { margin: 0; font-size: 18px; font-weight: 700; color: var(--ix-cream); }
+.hx-tile__packs { list-style: none; margin: 4px 0 10px; padding: 0; display: flex; gap: 8px; }
+.hx-tile__packs li {
+  width: 52px; height: 52px; display: grid; place-items: center;
+  border-radius: 6px; background: var(--ix-paper); color: var(--ix-wine);
+  font-weight: 900; font-size: 22px; letter-spacing: -0.03em;
+}
+.hx-tile__link { font-size: 14px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--ix-paper); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; transition: color .2s; }
+.hx-tile__link:hover { color: var(--ix-peach); }
+.hx-tile__bottle {
+  position: absolute; right: 3%; bottom: -4%; z-index: 1;
+  height: 94%; width: auto; transform: rotate(-8deg);
+  filter: drop-shadow(0 34px 34px rgba(0, 0, 0, .55));
+  transition: transform .6s cubic-bezier(.2, .8, .2, 1);
+}
+.hx-tile--prod:hover .hx-tile__bottle { transform: rotate(-3deg) scale(1.03); }
+.hx-tile--prod .btn--lime:hover { background: var(--ix-paper); color: var(--ix-wine); }
+
+/* Beneficios: durazno con Antes / Después */
+.hx-tile--ben { background: linear-gradient(135deg, #ffb98f 0%, var(--ix-peach) 55%, #f28a5e 100%); color: var(--ix-ink); }
+.hx-tile__words { position: absolute; top: 22px; left: 30px; display: flex; flex-direction: column; }
+.hx-tile__words span { font-weight: 900; font-style: italic; font-size: clamp(54px, 5.6vw, 92px); line-height: .85; letter-spacing: -0.05em; color: transparent; -webkit-text-stroke: 2px rgba(122, 0, 0, .3); }
+.hx-tile__words span + span { -webkit-text-stroke: 0; color: rgba(122, 0, 0, .14); }
+.hx-tile__dot { position: absolute; top: 30px; right: 30px; width: 54px; height: 54px; border-radius: 50%; background: linear-gradient(90deg, var(--ix-wine) 50%, var(--ix-paper) 50%); transition: transform .5s ease; }
+.hx-tile--ben:hover .hx-tile__dot { transform: rotate(180deg); }
+.hx-tile--ben .hx-tile__kicker { color: var(--ix-wine); }
+
+/* Ingredientes: crema con las tres frutas */
+.hx-tile--ing { background: linear-gradient(200deg, var(--ix-paper) 0%, var(--ix-cream) 100%); border: 2px solid var(--ix-ink); color: var(--ix-ink); }
+.hx-tile__fruits { position: absolute; top: 18px; right: 22px; display: flex; align-items: flex-start; }
+.hx-fruit { transition: transform .6s cubic-bezier(.2, .8, .2, 1); filter: drop-shadow(0 14px 14px rgba(74, 0, 0, .22)); }
+.hx-fruit--2 { margin-top: 26px; margin-left: -8px; }
+.hx-fruit--3 { margin-left: -10px; }
+.hx-tile--ing:hover .hx-fruit--1 { transform: rotate(-12deg) translateY(-4px); }
+.hx-tile--ing:hover .hx-fruit--2 { transform: rotate(10deg) scale(1.08); }
+.hx-tile--ing:hover .hx-fruit--3 { transform: rotate(-8deg) translateY(-6px); }
+.hx-tile--ing .hx-tile__kicker { color: var(--ix-wine); }
+.hx-tile--ben .hx-tile__title, .hx-tile--ing .hx-tile__title { padding-right: 64px; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  .hx-anatomy { grid-template-columns: minmax(0, 1fr); grid-template-areas: "p" "a" "b" "c"; gap: 16px; margin-top: 40px; }
+  .hx-anatomy__product { min-height: 440px; }
+  .hx-anatomy__bottle { height: 400px; }
+  .hx-note__link { display: none; }
+  .hx-note--a, .hx-note--c { align-self: auto; }
+  .hx-bento { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; }
+  .hx-tile--prod { grid-row: auto; min-height: 560px; justify-content: flex-start; }
+  .hx-tile__copy { max-width: 62%; }
+  .hx-tile__bottle { height: 380px; right: -2%; bottom: -6%; }
+  .hx-tile--ben, .hx-tile--ing { min-height: 300px; }
+}
+@media (max-width: 560px) {
+  .hx-benefits { padding: 90px 20px 100px; }
+  .hx-anatomy__product { min-height: 380px; }
+  .hx-anatomy__disc { width: 260px; }
+  .hx-anatomy__orbit { width: 330px; }
+  .hx-anatomy__bottle { height: 340px; }
+  .hx-note { padding: 22px 20px; }
+  .hx-explore { padding: 90px 20px 100px; }
+  .hx-tile, .hx-tile--prod { padding: 28px 22px; }
+  .hx-tile--prod { min-height: 620px; }
+  .hx-tile__copy { max-width: 100%; }
+  .hx-tile__bottle { height: 320px; right: 50%; bottom: -3%; transform: translateX(50%) rotate(-8deg); }
+  .hx-tile--prod:hover .hx-tile__bottle { transform: translateX(50%) rotate(-3deg) scale(1.03); }
+  .hx-tile__fruits svg { width: 70px; height: 70px; }
+  .hx-tile__words span { font-size: 52px; }
+  .hx-tile--ben .hx-tile__title, .hx-tile--ing .hx-tile__title { padding-right: 0; }
+  .hx-tile__go { position: static; align-self: flex-start; margin-top: 10px; width: 46px; height: 46px; }
+}
+
