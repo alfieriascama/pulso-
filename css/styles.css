@@ -1865,27 +1865,16 @@ main { overflow-x: clip; }
 /* =========================================================
    Inicio · portada a pantalla completa (la cinta se ve al abrir)
    ========================================================= */
-.ix-hero { min-height: calc(100svh - 44px); display: flex; flex-direction: column; padding-top: 100px; }
-.ix-hero__grid { flex: 1; width: 100%; padding: 0 0 128px; align-content: center; }
+.ix-hero { min-height: calc(100svh - 44px - 74px); display: flex; flex-direction: column; padding-top: 100px; }
+.ix-hero__grid { flex: 1; width: 100%; padding: 0 0 72px; align-content: center; }
 .ix-hero .ix-h1 { font-size: clamp(46px, min(8vw, 10.4vh), 120px); }
 .ix-hero .ix-hero__copy { gap: clamp(18px, 2.6vh, 28px); }
 .ix-hero__art { min-height: min(520px, 52vh); }
-.ix-hero .ix-marquee { bottom: 48px; }
-/* Foto del producto dentro del círculo durazno */
-.ix-photo {
-  position: relative; z-index: 2;
-  width: min(420px, 42vh); aspect-ratio: 1;
-  border-radius: 50%; overflow: hidden;
-  border: 10px solid var(--ix-peach);
-  box-shadow: 0 40px 120px -20px rgba(0, 0, 0, .6);
-}
-.ix-photo img { width: 100%; height: 100%; object-fit: cover; }
+.ix-hero .ix-marquee { bottom: -34px; }  /* montada sobre el borde, corta el rojo como antes */
 @media (max-width: 760px) {
   .ix-hero { min-height: 0; padding-top: 88px; }
   .ix-hero__grid { padding-bottom: 100px; }
-  .ix-hero .ix-marquee { bottom: 26px; }
   .ix-hero__art { min-height: 240px; }
-  .ix-photo { width: 200px; border-width: 7px; }
   .ix-hero .ix-btn { min-height: 50px; padding: 0 20px; font-size: 15px; }
   .ix-hero .ix-ghost { min-height: 50px; padding: 0 20px; font-size: 15px; }
   .ix-hero .ix-actions { gap: 10px; }
@@ -1896,4 +1885,11 @@ main { overflow-x: clip; }
   .ix-hero .ix-badge { width: 92px; height: 92px; }
   .ix-hero .ix-shot { font-size: 150px; }
   .ix-hero .ix-hero__grid { gap: 20px; }
+}
+.ix-hero .ix-bottle { height: min(470px, 46vh); }
+.ix-hero .ix-orb { width: min(440px, 44vh); }
+@media (max-width: 760px) {
+  .ix-hero .ix-bottle { height: 230px; }
+  .ix-hero .ix-orb { width: 220px; }
+  .ix-hero__grid { padding-bottom: 54px; }
 }
